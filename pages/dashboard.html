@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- CSS
+================================================== -->
+    <!-- Used Bootstrap Version 5.2.0 in this file for better performanance.
+    In other files wherever not mentioned, the version used is 4.0.0     -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="../css/font-awesome.min.css" /> -->
+    <link rel="stylesheet" href="../css/jquery.webui-popover.css" />
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/modals.css" />
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+        integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
+    <script src="https://kit.fontawesome.com/6c0f35acb6.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="dashboard-navbaar">
+            <div class="dashboard-navbaar--icon">
+                <img src="../img/SMS-iT-NEW-LOGO-MEDIUM.png" width="100%" height="100%" />
+            </div>
+            <div class="dashboard-navbaar--links">
+                <button class="dashboard-navbaar--links--button active" id="dashboard-content--dashboard">
+                    <img src="../img/asdad/icons2-22.png" width="15%" />
+                    <p>Dashboard</p>
+                </button>
+                <button class="dashboard-navbaar--links--button" id="dashboard-content--chatbox">
+                    <img src="../img/asdad/icons2-23.png" width="15%" />
+                    <p>Messages</p>
+                </button>
+                <button class="dashboard-navbaar--links--button" id="dashboard-content-activity">
+                    <img src="../img/asdad/icons2-24.png" width="15%" />
+                    <p>Activity Logs</p>
+                </button>
+                <button class="dashboard-navbaar--links--button" id="dashboard-content-contact">
+                    <img src="../img/asdad/icons2-20.png" width="15%" />
+                    <p>Contacts</p>
+                </button>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div class="dashboard-content--dashboard dashboard-content-info">
+                <div class="dashboard-content--cards">
+                    <div class="dashboard-content--cards--rows--1">
+                        <div class="dashboard-card">
+                            <div class="dashboard-card--info">
+                                <img src="../Icons/send-icon.png" />
+                                <div class="dashboard-card--info--amount">
+                                    <p>Received</p>
+                                    <p style="color:#508AFF; font-weight: 700;">100000</p>
+                                </div>
+                            </div>
+                            <div class="dashboard-card--graph">
+                                <canvas id="myChart1" width="100%" height="25%"></canvas>
+                            </div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="dashboard-card--info">
+                                <img src="../img/received.png" width="20%" height="20%" />
+                                <div class="dashboard-card--info--amount">
+                                    <p>Received</p>
+                                    <p style="color:green; font-weight: 700;">100000</p>
+                                </div>
+                            </div>
+                            <div class="dashboard-card--graph">
+                                <canvas id="myChart2" width="100%" height="25%"></canvas>
+                            </div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="dashboard-card--info">
+                                <img src="../img/delievered.png" width="20%" height="20%" />
+                                <div class="dashboard-card--info--amount">
+                                    <p>Delivered</p>
+                                    <p style="color:green; font-weight: 700;">100000</p>
+                                </div>
+                            </div>
+                            <div class="dashboard-card--graph">
+                                <canvas id="myChart3" width="100%" height="25%"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dashboard-content--cards--rows--1">
+                        <div class="dashboard-card">
+                            <div class="dashboard-card--info">
+                                <img src="../img/failed.png" width="20%" height="20%" />
+                                <div class="dashboard-card--info--amount">
+                                    <p>Failed</p>
+                                    <p style="color:red; font-weight: 700;">100000</p>
+                                </div>
+                            </div>
+                            <div class="dashboard-card--graph">
+                                <canvas id="myChart4" width="100%" height="25%"></canvas>
+                            </div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="dashboard-card--info">
+                                <img src="../img/queued.png" width="20%" height="20%" />
+                                <div class="dashboard-card--info--amount">
+                                    <p>Queued</p>
+                                    <p style="color: #F2C60F; font-weight: 700;">100000</p>
+                                </div>
+                            </div>
+                            <div class="dashboard-card--graph">
+                                <canvas id="myChart5" width="100%" height="25%"></canvas>
+                            </div>
+                        </div>
+                        <div class="dashboard-card">
+                            <div class="dashboard-card--info">
+                                <img src="../img/read.png" width="20%" height="20%" />
+                                <div class="dashboard-card--info--amount">
+                                    <p>Read</p>
+                                    <p style="color:#29ABE2; font-weight: 700;">100000</p>
+                                </div>
+                            </div>
+                            <div class="dashboard-card--graph">
+                                <canvas id="myChart6" width="100%" height="25%"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-content-section-2">
+                    <button data-bs-toggle="modal" data-bs-target="#myModal1">
+                        <p>Create Group</p>
+                    </button>
+                    <button data-bs-toggle="modal" data-bs-target="#myModal2">Get New Number</button>
+                    <button data-bs-toggle="modal" data-bs-target="#myModal3">Import Contacts</button>
+                </div>
+                <div class="dashboard-content-section-3">
+                    <div class="dashboard-content-section-3-navbar">
+                        <div class="send-message-from">
+                            <div class="send-message-from-with-icon">
+                                <img src="../Icons/send-message.png" />
+                                <p style="font-weight: 600;">Send message from</p>
+                            </div>
+                            <select> Select one
+                                <option>1234567890</option>
+                            </select>
+                        </div>
+                        <div class="credits-needed">
+                            <div class="credits-needed-with-icon">
+                                <img src="../Icons/plus-icon.png" />
+                                <p style="font-weight: 600;">Credits Needed</p>
+                            </div>
+                            <p style="font-weight: 600;">123</p>
+                        </div>
+                        <div class="local-time">
+                            <div class="local-time-with-icon">
+                                <img src="../Icons/earth-icon.png" />
+                                <p style="font-weight: 600;">Local Time </p>
+                            </div>
+                            <p style="font-weight: 600;"> 2022-08-07 01:39:01 PM</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-content-section-3-body">
+                        <div class="dashboard-content-section-3-body-left">
+                            <div class="dashboard-content-sender">
+                                <div class="sender-id">
+                                    <p> Send from alphanumeric Sender ID</p>
+                                    <input type="checkbox" onClick="senderId()" id="sender-id-checkbox"
+                                        class="sender-id-checkbox" style="color: black;">
+
+                                    <div class="dropdown">
+                                        <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                        <div class="dropdown-content">
+                                            <p>You can send from an alphanumeric sender ID, however you must offer your
+                                                users the ability to opt out by writing to your support team, calling
+                                                your support phone line, or texting STOP to your actual
+                                                number.<br /><br />We recommend that you provide your users with a clear
+                                                description in your terms of services or when they intially sign-up.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="sender-id-input hide" id="sender-id-input">
+                                    <input type="text" placeholder="Enter Sender ID" style="padding-left: 5%;" />
+                                </div>
+                            </div>
+                            <div class="receivers-list">
+                                <p style="font-weight: 600;">Pick Receivers List</p>
+                                <div class="receivers-list-radio">
+                                    <div class="receivers-list-radio-checklist">
+                                        <input type="radio" id="groups" value="groups" name="receivers-list--buttons"
+                                            style="color: black;">
+                                        <p>Groups</p>
+                                    </div>
+                                    <div class="receivers-list-radio-checklist">
+                                        <input type="radio" id="contacts" value="contacts"
+                                            name="receivers-list--buttons" style="color: black;">
+                                        <p> Contacts</p>
+                                    </div>
+                                    <div class="receivers-list-radio-checklist">
+                                        <input type="radio" id="manual" value="manual" name="receivers-list--buttons"
+                                            style="color: black;">
+                                        <p> Manual</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="message-groups hide" id="message-groups">
+                                <div class="message-groups--filter--title">
+                                    <h3>Location Filters</h3>
+                                </div>
+                                <div class="message-groups--filter--city">
+                                    <p style="font-weight: 600;">City</p>
+                                    <input type="text" placeholder="Enter City" class="input-border-radius" />
+                                </div>
+                                <div class="message-groups--filter--state">
+                                    <p style="font-weight: 600;">State</p>
+                                    <input type="text" placeholder="Enter State" class="input-border-radius" />
+                                </div>
+                                <div class="message-groups--filter--postal">
+                                    <p style="font-weight: 600;">Postal Code</p>
+                                    <input type="text" placeholder="Enter Postal Code" class="input-border-radius" />
+                                </div>
+                                <div class="message-groups--filter--delivery">
+                                    <p style="font-weight: 600;">Schedule Delivery</p>
+                                    <input type="datetime-local" placeholder="Enter A Date"
+                                        class="input-border-radius" />
+                                </div>
+                            </div>
+                            <div class="message-contacts hide" id="message-contacts">
+                                <div class="message-contacts--number">
+                                    <p>Name | Group Name | Phone Number</p>
+                                    <select class="input-border-radius">
+                                        <option>123456789</option>
+                                    </select>
+                                </div>
+                                <div class="message-contacts--delivery">
+                                    <p>Schedule Delivery</p>
+                                    <input type="datetime-local" placeholder="Enter A Date" class="input-border-radius">
+                                </div>
+                            </div>
+                            <div class="message-manual hide" id="message-manual">
+                                <div class="message-manual--number">
+                                    <p>Phone Number</p>
+                                    <textarea rows="3" cols="50"
+                                        placeholder="Please use country code with number"></textarea>
+                                </div>
+                            </div>
+                            <div class="message-template">
+                                <p>Message Template</p>
+                                <select>
+                                    <option>123456789</option>
+                                </select>
+
+                            </div>
+                            <div class="mobile-splash-template">
+                                <p>Mobile Splash Page</p>
+                                <select>
+                                    <option>123456789</option>
+                                </select>
+
+                            </div>
+                            <div class="facebook-link">
+                                <button>Facebook</button>
+                                <input type="checkbox" style="color: black;">
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                    <div class="dropdown-content">
+                                        <p>Checking this box will post the message to your Facebook wall after clicking
+                                            send. If you are sending multiple MMS images, then only the 1st image will
+                                            be posted to your wall
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sms-mms-checkbox">
+                                <p>SMS</p>
+                                <input type="checkbox" style="color: black;">
+                                <p>MMS</p>
+                                <input type="checkbox" style="color: black;">
+                            </div>
+                            <div class="pick-file">
+                                <input type="file" name="uploadfile" id="img" style="display:none;"></input>
+                                <label class="pick-file-image" for="img">Pick File
+                                    <img src="../img/New folder (3)/icons-11.png" height="100%" width="20%" />
+                                </label>
+
+                            </div>
+                            <div class="number-pool">
+                                <p>Number Pool</p>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round" style="background-color: #ccc; color: #22B573;"></span>
+                                </label>
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                    <div class="dropdown-content">
+                                        <p> 1 credit is charged for each 160 character segment. If you have a message
+                                            that is 300 characters, and you are sending to 10 people, 20 credits will be
+                                            deducted (2 credits for each person).<br /><br /><b>NOTE:</b> Messages
+                                            containing non-GSM(unicode) characters will be charged 1 credit for each 70
+                                            character segment.
+                                        </p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard-content-section-3-body-right">
+                            <div>
+                                <div style="margin-bottom: 5px;">
+                                    <span style="font-weight: 600; ">Message</span>
+                                    <div class="dropdown">
+                                        <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                        <div class="dropdown-content">
+                                            <p>
+                                                1 credit is charged for each 160 character segment. If you have a
+                                                message that is 300 characters, and you are sending to 10 people, 20
+                                                credits will be deducted (2 credits for each
+                                                person).<br /><br /><b>NOTE:</b> Messages containing non-GSM(unicode)
+                                                characters will be charged 1 credit for each 70 character segment.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <textarea rows="14"></textarea>
+                            </div>
+                            <div>
+                                <p style="font-weight: 600;">Appended (Opt-Out) Message</p>
+                                <textarea rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message-preview">
+                        <p style="font-weight: 600;">Message Preview</p>
+                        <textarea name="" rows="5"></textarea>
+                    </div>
+                    <div class="number-of-characters">
+                        <div class="number-of-characters-left">
+                            <p style="font-weight: 600;">Number of Characters:0</p>
+                        </div>
+                        <div class="number-of-characters-right">
+                            <div class="number-of-characters-right-top-bottoms">
+                                <button class="variation-btn">Variations</button>
+                                <button class="spin-btn">Spin</button>
+                            </div>
+                            <button class="send-message-btn">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-content--chatbox dashboard-content-info hide">
+                <div class="chatbox-content">
+                    <div class="chatbox-content--navbar">
+                        <div class="chatbox-content--navbar--number">
+                            <p>Send Number</p>
+                            <input type="tel" value="987654321" />
+                        </div>
+                        <div class="chatbox-content--navbar--icons">
+                            <img src="../img/asdad/icons2-14.png" width="7%" height="7%" title="Phonebook"
+                                data-bs-toggle="modal" data-bs-target="#open-note-more" />
+                            <img src="../img/asdad/icons2-15.png" width="7%" height="4%" title="Edit Contact" />
+                            <img src="../img/asdad/icons2-16.png" width="7%" height="4%" title="Delete Contact" />
+                            <img src="../img/asdad/icons2-17.png" width="7%" height="4%" title="Delete Chat" />
+                            <img src="../img/asdad/icons2-19.png" width="7%" height="4%" title="Schedule Message" />
+                        </div>
+                    </div>
+                    <div class="chatbox-content-body">
+                        <p class="chatbox-content-body-title">SMS Chat</p>
+                        <section>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card-chatbox" id="chat3" style="border-radius: 15px;">
+                                            <div class="card-body ">
+                                                <div class="chatbox-contacts">
+                                                    <div
+                                                        class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0 chatbox-contacts-left">
+                                                        <div class=" chatbox-contacts-list">
+                                                            <div class="chatbox-contacts-search">
+                                                                <input type="search" class="form-control rounded"
+                                                                    placeholder="Search" aria-label="Search"
+                                                                    aria-describedby="search-addon"
+                                                                    style="font-style: italic; border:none;" />
+                                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                                <i class="fa-solid fa-rotate-right"></i>
+                                                                <i class="fa-solid fa-circle-question"></i>
+                                                            </div>
+                                                            <div data-mdb-perfect-scrollbar="true"
+                                                                style="position: relative; height: 450px; overflow-y: scroll;">
+                                                                <ul class="list-unstyled mb-0">
+                                                                    <li class="p-2 border-bottom">
+                                                                        <a href="#!"
+                                                                            class="d-flex justify-content-center chatbox-contacts-list-left">
+                                                                            <div
+                                                                                class="d-flex flex-row chatbox-contacts-list-info">
+                                                                                <div class="chatbox-contacts-left-img">
+                                                                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                                                                        alt="avatar"
+                                                                                        class="d-flex align-self-center">
+                                                                                    <span
+                                                                                        class="badge bg-success badge-dot"></span>
+                                                                                </div>
+                                                                                <div class="pt-1">
+                                                                                    <p class="fw-bold mb-0"
+                                                                                        style="color:black;">Marie
+                                                                                        Horwitz</p>
+                                                                                    <p class="small text-muted">Hello,
+                                                                                        Are you there?</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="pt-1">
+                                                                                <p class="small text-muted mb-1">Just
+                                                                                    now</p>
+                                                                                <span
+                                                                                    class="badge bg-danger rounded-pill float-end">3</span>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="p-2 border-bottom">
+                                                                        <a href="#!"
+                                                                            class="d-flex justify-content-center chatbox-contacts-list-left">
+                                                                            <div
+                                                                                class="d-flex flex-row chatbox-contacts-list-info">
+                                                                                <div class="chatbox-contacts-left-img">
+                                                                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2-bg.webp"
+                                                                                        alt="avatar"
+                                                                                        class="d-flex align-self-center me-3">
+                                                                                    <span
+                                                                                        class="badge bg-warning badge-dot"></span>
+                                                                                </div>
+                                                                                <div class="pt-1">
+                                                                                    <p class="fw-bold mb-0"
+                                                                                        style="color:black;">Alexa Chung
+                                                                                    </p>
+                                                                                    <p class="small text-muted">Lorem
+                                                                                        ipsum dolor sit.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="pt-1">
+                                                                                <p class="small text-muted mb-1">5 mins
+                                                                                    ago</p>
+                                                                                <span
+                                                                                    class="badge bg-danger rounded-pill float-end">2</span>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="p-2 border-bottom">
+                                                                        <a href="#!"
+                                                                            class="d-flex justify-content-center chatbox-contacts-list-left">
+                                                                            <div
+                                                                                class="d-flex flex-row chatbox-contacts-list-info">
+                                                                                <div class="chatbox-contacts-left-img">
+                                                                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                                                                        alt="avatar"
+                                                                                        class="d-flex align-self-center me-3"
+                                                                                        width="60">
+                                                                                    <span
+                                                                                        class="badge bg-success badge-dot"></span>
+                                                                                </div>
+                                                                                <div class="pt-1">
+                                                                                    <p class="fw-bold mb-0"
+                                                                                        style="color:black;">Danny
+                                                                                        McChain</p>
+                                                                                    <p class="small text-muted">Lorem
+                                                                                        ipsum dolor sit.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="pt-1">
+                                                                                <p class="small text-muted mb-1">
+                                                                                    Yesterday</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="p-2 border-bottom">
+                                                                        <a href="#!"
+                                                                            class="d-flex justify-content-center chatbox-contacts-list-left">
+                                                                            <div
+                                                                                class="d-flex flex-row chatbox-contacts-list-info">
+                                                                                <div class="chatbox-contacts-left-img">
+                                                                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                                                                                        alt="avatar"
+                                                                                        class="d-flex align-self-center me-3"
+                                                                                        width="60">
+                                                                                    <span
+                                                                                        class="badge bg-danger badge-dot"></span>
+                                                                                </div>
+                                                                                <div class="pt-1">
+                                                                                    <p class="fw-bold mb-0"
+                                                                                        style="color:black;">Ashley
+                                                                                        Olsen
+                                                                                    </p>
+                                                                                    <p class="small text-muted">Lorem
+                                                                                        ipsum dolor sit.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="pt-1">
+                                                                                <p class="small text-muted mb-1">
+                                                                                    Yesterday</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="p-2 border-bottom">
+                                                                        <a href="#!"
+                                                                            class="d-flex justify-content-center chatbox-contacts-list-left">
+                                                                            <div
+                                                                                class="d-flex flex-row chatbox-contacts-list-info">
+                                                                                <div class="chatbox-contacts-left-img">
+                                                                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava5-bg.webp"
+                                                                                        alt="avatar"
+                                                                                        class="d-flex align-self-center me-3"
+                                                                                        width="60">
+                                                                                    <span
+                                                                                        class="badge bg-warning badge-dot"></span>
+                                                                                </div>
+                                                                                <div class="pt-1">
+                                                                                    <p class="fw-bold mb-0"
+                                                                                        style="color:black;">Kate Moss
+                                                                                    </p>
+                                                                                    <p class="small text-muted">Lorem
+                                                                                        ipsum dolor sit.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="pt-1">
+                                                                                <p class="small text-muted mb-1">
+                                                                                    Yesterday</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="p-2">
+                                                                        <a href="#!"
+                                                                            class="d-flex justify-content-center chatbox-contacts-list-left">
+                                                                            <div
+                                                                                class="d-flex flex-row chatbox-contacts-list-info">
+                                                                                <div class="chatbox-contacts-left-img">
+                                                                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava6-bg.webp"
+                                                                                        alt="avatar"
+                                                                                        class="d-flex align-self-center me-3"
+                                                                                        width="60">
+                                                                                    <span
+                                                                                        class="badge bg-success badge-dot"></span>
+                                                                                </div>
+                                                                                <div class="pt-1">
+                                                                                    <p class="fw-bold mb-0"
+                                                                                        style="color:black;">Ben Smith
+                                                                                    </p>
+                                                                                    <p class="small text-muted">Lorem
+                                                                                        ipsum dolor sit.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="pt-1">
+                                                                                <p class="small text-muted mb-1">
+                                                                                    Yesterday</p>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <section style="background-color: #e6e6e6; width: 100%;">
+
+
+                                                        <div class="row d-flex justify-content-center"
+                                                            style="width: 105%;">
+                                                            <div class="col-md-12 col-lg-12 col-xl-12">
+
+                                                                <div class="card" id="chat2"
+                                                                    style=" --bs-border-color-translucent: rgba(0, 0, 0, 0); background-color:white; border-radius: 20px;">
+                                                                    <div class="card-header d-flex justify-content-between align-items-center p-3 "
+                                                                        style=" margin: -1px; border-top-left-radius: 20px; border-top-right-radius: 20px; background-color: #F2F2F2;">
+                                                                        <h5 class="mb-0">John</h5>
+
+                                                                    </div>
+                                                                    <div class="card-body-right-content"
+                                                                        data-mdb-perfect-scrollbar="true"
+                                                                        style=" height:400px; overflow-y:scroll; padding-left: 2%; padding-right: 2%; padding-top: 5px;">
+
+                                                                        <div
+                                                                            class="d-flex flex-row justify-content-start">
+                                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                                                                alt="avatar 1"
+                                                                                style="width: 9%; height: 100%;">
+                                                                            <div>
+                                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                                    style="background-color: #f5f6f7;">
+                                                                                    Hi</p>
+                                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                                    style="background-color: #f5f6f7;">
+                                                                                    How are you ...???
+                                                                                </p>
+                                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                                    style="background-color: #f5f6f7;">
+                                                                                    What are you doing
+                                                                                    tomorrow? Can we come up a bar?
+                                                                                </p>
+                                                                                <p
+                                                                                    class="small ms-3 mb-3 rounded-3 text-muted">
+                                                                                    23:58</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="divider d-flex align-items-center mb-4">
+                                                                            <p class="text-center mx-3 mb-0"
+                                                                                style="color: #a2aab7;">Today</p>
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="d-flex flex-row justify-content-end mb-4 pt-1">
+                                                                            <div>
+                                                                                <p
+                                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                                    Hiii, I'm good.</p>
+                                                                                <p
+                                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                                    How are you doing?</p>
+                                                                                <p
+                                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                                    Long time no see! Tomorrow
+                                                                                    office. will
+                                                                                    be free on sunday.</p>
+                                                                                <p
+                                                                                    class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">
+                                                                                    00:06</p>
+                                                                            </div>
+                                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                                                                                alt="avatar 1"
+                                                                                style="width: 9%; height: 100%;">
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="d-flex flex-row justify-content-start mb-4">
+                                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                                                                alt="avatar 1"
+                                                                                style="width: 9%; height: 100%;">
+                                                                            <div>
+                                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                                    style="background-color: #f5f6f7;">
+                                                                                    Okay</p>
+                                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                                    style="background-color: #f5f6f7;">
+                                                                                    We will go on
+                                                                                    Sunday?</p>
+                                                                                <p
+                                                                                    class="small ms-3 mb-3 rounded-3 text-muted">
+                                                                                    00:07</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="d-flex flex-row justify-content-end mb-4">
+                                                                            <div>
+                                                                                <p
+                                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                                    That's awesome!</p>
+                                                                                <p
+                                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                                    I will meet you Sandon Square
+                                                                                    sharp at
+                                                                                    10 AM</p>
+                                                                                <p
+                                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                                    Is that okay?</p>
+                                                                                <p
+                                                                                    class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">
+                                                                                    00:09</p>
+                                                                            </div>
+                                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                                                                                alt="avatar 1"
+                                                                                style="width: 9%; height: 100%;">
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="d-flex flex-row justify-content-start mb-4">
+                                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                                                                alt="avatar 1"
+                                                                                style="width: 9%; height: 100%;">
+                                                                            <div>
+                                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                                    style="background-color: #f5f6f7;">
+                                                                                    Okay i will meet
+                                                                                    you on
+                                                                                    Sandon Square</p>
+                                                                                <p
+                                                                                    class="small ms-3 mb-3 rounded-3 text-muted">
+                                                                                    00:11</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="d-flex flex-row justify-content-end mb-4">
+                                                                            <div>
+                                                                                <p
+                                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                                    Do you have pictures of Matley
+                                                                                    Marriage?</p>
+                                                                                <p
+                                                                                    class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">
+                                                                                    00:11</p>
+                                                                            </div>
+                                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                                                                                alt="avatar 1"
+                                                                                style="width: 9%; height: 100%;">
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="d-flex flex-row justify-content-start mb-4">
+                                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                                                                alt="avatar 1"
+                                                                                style="width: 9%; height: 100%;">
+                                                                            <div>
+                                                                                <p class="small p-2 ms-3 mb-1 rounded-3"
+                                                                                    style="background-color: #f5f6f7;">
+                                                                                    Sorry I don't
+                                                                                    have. i
+                                                                                    changed my phone.</p>
+                                                                                <p
+                                                                                    class="small ms-3 mb-3 rounded-3 text-muted">
+                                                                                    00:13</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div
+                                                                            class="d-flex flex-row justify-content-end">
+                                                                            <div>
+                                                                                <p
+                                                                                    class="small p-2 me-3 mb-1 text-white rounded-3 bg-primary">
+                                                                                    Okay then see you on sunday!!
+                                                                                </p>
+                                                                                <p
+                                                                                    class="small me-3 mb-3 rounded-3 text-muted d-flex justify-content-end">
+                                                                                    00:15</p>
+                                                                            </div>
+                                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp"
+                                                                                alt="avatar 1"
+                                                                                style="width: 9%; height: 100%;">
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="chatbox-contacts-chat-footer card-footer text-muted d-flex justify-content-start align-items-center p-3"
+                                                                        style="margin: -1px; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; background-color: #F2F2F2;">
+                                                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                                                                            alt="avatar 3"
+                                                                            style="width: 9%; height: 100%;">
+                                                                        <input type="text"
+                                                                            class="form-control form-control-lg"
+                                                                            id="exampleFormControlInput1"
+                                                                            placeholder="Type message"
+                                                                            style="border: none; background-color: #F2F2F2; font-style: italic;">
+                                                                        <a class="ms-3 text-muted" href="#!">
+                                                                            <i class="fa-solid fa-image"
+                                                                                data-bs-toggle="modal"
+                                                                                data-bs-target="#upload-image"></i>
+                                                                        </a>
+                                                                        <a class="ms-3 text-muted" href="#!">
+                                                                            <i class="fas fa-paperclip"></i>
+                                                                        </a>
+                                                                        <a class="ms-3 text-muted" href="#!">
+                                                                            <i class="bi bi-columns-gap"></i>
+                                                                        </a>
+                                                                        <a class="ms-3" href="#!">
+                                                                            <i class="fas fa-paper-plane"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-content-contact dashboard-content-info hide">
+                <div class="contact-page">
+                    <div class="contact-page-navbar">
+                        <div class="contact-page-navbar-icons">
+                            <img src="../img/New folder (3)/contactsicons-51.png" title="Subscribers" />
+                            <img src="../img/New folder (3)/contactsicons-52.png" title="Un-Subscribers" />
+                            <img src="../img/New folder (3)/contactsicons-53.png" title="Subs bye SMS" />
+                            <img src="../img/New folder (3)/contactsicons-54.png" title="Subs by Widget" />
+                            <img src="../img/New folder (3)/contactsicons-55.png" title="Subs by Kiosk" />
+                            <img src="../img/New folder (3)/contactsicons-56.png" title="Imports" />
+                        </div>
+                        <div class="contact-page-navbar-page-search">
+                            <p>Page Search</p>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="contact-page-mid-div">
+                        <p style="font-size:1.4vw; font-weight:600">Contact Search</p>
+                        <div class="contact-search-with-border">
+                            <div class="contact-search-with-border-left">
+                                <p>Field you want to search on</p>
+                                <select>
+                                    <option>Number</option>
+                                </select>
+                            </div>
+                            <div class="contact-search-with-border-right">
+                                <p>Search on value</p>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="contact-search-no-border">
+                            <div class="contact-search-no-border-left">
+                                <p style="font-weight: 600;">Filters:</p>
+                                <div class="contact-search-no-border-left-groups">
+                                    <p>Groups</p>
+                                    <select>
+                                        <option>
+                                            Hellooo
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="contact-search-no-border-right">
+                                <div class="contact-search-no-border-right-source">
+                                    <p>Source</p>
+                                    <select>
+                                        <option>
+                                            Hellooo
+                                        </option>
+                                    </select>
+                                </div>
+                                <button class="contact-search-no-border-right-reset">
+                                    Reset Filters
+                                </button>
+                            </div>
+                        </div>
+                        <div class="contact-page-mid-div-search-button">
+                            <button style="background-color: #22b573;border:none;">Search</button>
+                        </div>
+                    </div>
+                    <div class="contact-page-last-div">
+                        <div class="contact-page-last-div-navbar">
+                            <div class="contact-page-last-div-navbar-left">
+                                <p>Name</p>
+                                <p>Email</p>
+                                <p>Number</p>
+                                <p>Group</p>
+                            </div>
+                            <div class="contact-page-last-div-navbar-right">
+                                <p class="subscriber">Subscriber</p>
+                                <p class="source">Source</p>
+                                <p class="actions">Actions</p>
+                            </div>
+                        </div>
+                        <div class="contact-page-last-div-first-row">
+                            <div class="contact-page-last-div-first-row-left">
+                                <p>Name</p>
+                                <p>Email</p>
+                                <p>Number</p>
+                                <p>Name</p>
+                            </div>
+
+
+
+                            <div class="contact-page-last-div-first-row-right">
+                                <p class="subscriber">&#10004;</p>
+                                <p class="source">SMS</p>
+                                <div class="contact-page-last-div-first-row-right-icons actions">
+                                    <img src="../img/icons/icons-message.png" style="width:14% ;"
+                                        title="Download Chat History" data-bs-toggle="modal"
+                                        data-bs-target="#single-sms" />
+                                    <img src="../img/New folder (3)/message-two.png" style="width:14% ;"
+                                        title="View Notes" data-bs-toggle="modal" data-bs-target="#send-email" />
+                                    <img src="../img/New folder (3)/contactsicons-47.png" style="width:14% ;"
+                                        title="Schedule Message" />
+                                    <img src="../img/New folder (3)/contactsicons-48.png" style="width:14% ;"
+                                        title="Edit Contact" data-bs-toggle="modal" data-bs-target="#edit-contact" />
+                                    <img src="../img/New folder (3)/contactsicons-49.png" style="width:14% ;"
+                                        title="Delete Contact" />
+                                    <img src="../img/New folder (3)/contactsicons-50.png" style="width:14% ;"
+                                        title="Delete Chat" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-page-last-div-first-row">
+                            <div class="contact-page-last-div-first-row-left">
+                                <p>Name</p>
+                                <p>Email</p>
+                                <p>Number</p>
+                                <p>Name</p>
+                            </div>
+                            <div class="contact-page-last-div-first-row-right">
+                                <p class="subscriber">&#10004;</p>
+                                <p class="source">SMS</p>
+                                <div class="contact-page-last-div-first-row-right-icons actions">
+                                    <img src="../img/icons/icons-message.png" style="width:14% ;"
+                                        title="Download Chat History" data-bs-toggle="modal"
+                                        data-bs-target="#single-sms" />
+                                    <img src="../img/New folder (3)/message-two.png" style="width:14% ;"
+                                        title="View Notes" data-bs-toggle="modal" data-bs-target="#send-email" />
+                                    <img src="../img/New folder (3)/contactsicons-47.png" style="width:14% ;"
+                                        title="Schedule Message" />
+                                    <img src="../img/New folder (3)/contactsicons-48.png" style="width:14% ;"
+                                        title="Edit Contact" data-bs-toggle="modal" data-bs-target="#edit-contact" />
+                                    <img src="../img/New folder (3)/contactsicons-49.png" style="width:14% ;"
+                                        title="Delete Contact" />
+                                    <img src="../img/New folder (3)/contactsicons-50.png" style="width:14% ;"
+                                        title="Delete Chat" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-content-activity dashboard-content-info hide">
+                <div class="activity">
+                    <div class="activity-navbar">
+                        <div class="activity-navbar--number">
+                            <p style="font-size: 1vw; font-weight: 600;">Log Type</p>
+                            <select name="device" id="device">
+                                <option value="">Select Device</option>
+                                <option value="1">Device 1</option>
+                                <option value="2">Device 2</option>
+                                <option value="3">Device 3</option>
+                            </select>
+                        </div>
+                        <div class="activity-navbar--icons">
+                            <img src="../img/icons/icons-copy.png" title="Copy" />
+                            <img src="../img/icons/icons-xx.png" title="Excel" />
+                            <img src="../img/icons/icons-printer.png" title="Print" />
+                            <img src="../img/icons/icons-3-bars.png" title="Columns" />
+                        </div>
+                    </div>
+                    <div class="activity-body">
+                        <div class="activity-search">
+                            <div class="activity-search--header">
+                                <p style="font-weight: 600;">Search Messages</p>
+                            </div>
+                            <div class="activity-search--input">
+                                <div class="activity-search--input--field">
+                                    <img src="../Icons/New folder (4)/activityicons-60.png" width="7%" height="7%" />
+                                    <label for="device">Select Device</label>
+                                    <select name="device" id="device">
+                                        <option value="">Select Device</option>
+                                        <option value="1">Device 1</option>
+                                        <option value="2">Device 2</option>
+                                        <option value="3">Device 3</option>
+                                    </select>
+                                </div>
+                                <div class="activity-search--input--field">
+                                    <img src="../Icons/New folder (4)/activityicons-62.png" width="7%" height="7%" />
+                                    <label for="phone">Mobile Number</label>
+                                    <input type="tel" name="phone" id="phone" />
+                                </div>
+                                <div class="activity-search--input--field">
+                                    <img src="../Icons/New folder (4)/activityicons-64.png" width="7%" height="7%" />
+                                    <label for="status">Status</label>
+                                    <select name="status" id="status">
+                                        <option value="">Select Device</option>
+                                        <option value="1">Device 1</option>
+                                        <option value="2">Device 2</option>
+                                        <option value="3">Device 3</option>
+                                    </select>
+                                </div>
+                                <div class="activity-search--input--field">
+                                    <img src="../Icons/New folder (4)/activityicons-61.png" width="7%" height="7%" />
+                                    <label for="message0">Message</label>
+                                    <input type="text" name="message" id="message" />
+                                </div>
+                                <div class="activity-search--input--field">
+                                    <img src="../Icons/New folder (4)/activityicons-63.png" width="7%" height="7%" />
+                                    <label for="start-date">Start Date</label>
+                                    <input type="date" name="start-date" id="start-date" />
+                                </div>
+                                <div class="activity-search--input--field">
+                                    <img src="../Icons/New folder (4)/activityicons-63.png" width="7%" height="7%" />
+                                    <label for="end-date">End Date</Em></label>
+                                    <input type="date" name="end-date" id="end-date" />
+                                </div>
+                            </div>
+                            <div class="activity-search--buttons">
+                                <div class="activity-search--buttons--button">
+                                    <button>Search</button>
+                                </div>
+                                <div class="activity-search-buttons--records">
+                                    <label for="records">Number Of Records</label>
+                                    <select>
+                                        <option value="60">60</option>
+                                        <option value="100">100</option>
+                                        <option value="120">120</option>
+                                        <option value="150">150</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="activity-page-last-div">
+                            <div class="activity-page-last-div-navbar">
+                                <div class="activity-page-last-div-navbar-left">
+                                    <p>Read</p>
+                                    <p>From Number</p>
+                                    <p>To Number</p>
+                                    <p>Name</p>
+                                </div>
+                                <div class="activity-page-last-div-navbar-right">
+                                    <div class="activity-page-last-div-navbar-right-message-status">
+                                        <p>Messages</p>
+                                        <p>Created</p>
+                                        <p>Status</p>
+                                    </div>
+
+                                    <p class="activity-page-last-div-navbar-right-actions">Actions</p>
+
+                                </div>
+                            </div>
+                            <div class="activity-page-last-div-first-row">
+                                <div class="activity-page-last-div-first-row-left">
+                                    <img src="../img/icons/right icon.png" width="100%" height="100%"
+                                        style="width:5%; height: auto;">
+                                    <p>From Number</p>
+                                    <p>To Number</p>
+                                    <p>Name</p>
+                                </div>
+                                <div class="activity-page-last-div-first-row-right">
+                                    <div class="activity-page-last-div-navbar-right-message-status">
+                                        <p>Messages</p>
+                                        <p>Created</p>
+                                        <p>Status</p>
+                                    </div>
+                                    <div class="activity-page-last-div-first-row-right-icons"
+                                        style="width: 30%; display: flex; justify-content:flex-start; column-gap: 10px;">
+                                        <img src="../img/icons/icons-eye.png" width="20%" height="20%" title="Read"
+                                            data-bs-toggle="modal" data-bs-target="#activity-logs">
+                                        <img src="../img/icons/icons-message.png" width="20%" height="20%"
+                                            title="Send SMS" data-bs-toggle="modal" data-bs-target="#single-sms">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="activity-page-last-div-first-row">
+                                <div class="activity-page-last-div-first-row-left">
+                                    <img src="../img/icons/right icon.png" width="100%" height="100%"
+                                        style="width:5%; height: auto;">
+                                    <p>From Number</p>
+                                    <p>To Number</p>
+                                    <p>Name</p>
+                                </div>
+                                <div class="activity-page-last-div-first-row-right">
+                                    <div class="activity-page-last-div-navbar-right-message-status">
+                                        <p>Messages</p>
+                                        <p>Created</p>
+                                        <p>Status</p>
+                                    </div>
+                                    <div class="activity-page-last-div-first-row-right-icons"
+                                        style="width: 30%; display: flex; justify-content:flex-start; column-gap: 10px;">
+                                        <img src="../img/icons/icons-eye.png" width="20%" height="20%" title="Read"
+                                            data-bs-toggle="modal" data-bs-target="#activity-logs">
+                                        <img src="../img/icons/icons-message.png" width="20%" height="20%"
+                                            title="Send SMS" data-bs-toggle="modal" data-bs-target="#single-sms">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modals  -->
+
+    <!-- CREATE GROUP MODAL -->
+
+    <div id="myModal1" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-group--header">
+                        <div class="modal-group--header--title">
+                            <img src="../Icons/iconsD-69.png" width="10%" height="20%" />
+                            <div>
+                                <p style="font-weight: 600;">Create Group Form</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="padding-right: 3.5%; padding-top:0% ;"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-group--body">
+                        <div class="modal-group--body--field">
+                            <div>
+                                <span style="font-weight: 600; ">Copy Members From Existing
+                                    Group</span>
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                    <div class="dropdown-content">
+                                        <p>Select an existing group if you want use that group as a template to create
+                                            your new group. All fields from the group selected will be pre-populated
+                                            with the exception of group name and keyword. You must give those unique
+                                            names. If you are copying from a MMS group type, you must select new images.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <select>
+                                <option>Please select A Group</option>
+                            </select>
+                        </div>
+                        <div class="modal-group--body--field">
+                            <p style="font-weight: 600; ">Enter Group Name *</p>
+                            <input type="text" placeholder="Group Name" />
+                        </div>
+                        <div class="modal-group--body--field">
+                            <div>
+                                <span style="font-weight: 600; ">Keyword *</span>
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                    <div class="dropdown-content">
+                                        <p>Keyword that subscriber will text in to your number to join your contact
+                                            list.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="text" placeholder="Keyword" />
+                        </div>
+                        <div class="modal-group--body--field">
+                            <div>
+                                <span style="font-weight: 600; ">Group Type</span>
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                    <div class="dropdown-content">
+                                        <p><b>Coupon</b> - User can continually text in the keyword to receive the
+                                            auto-reply message. e.g. You may update the message weekly or monthly with a
+                                            new coupon code and user can text in to receive it. <br /><b>Join</b> - User
+                                            can only text in the keyword once to be added to the group.
+                                            <br /><b>Property (Real Estate)</b> - Perfect for realtors. Enter in all the
+                                            property details, and those details will be sent back to the prospective
+                                            buyer when they text in the keyword. <br /><b>Vehicle</b> - Perfect for car
+                                            dealers. Enter in all the vehicle details, and those details will be sent
+                                            back to the prospective buyer when they text in the keyword.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <select>
+                                <option>Please Select A Group Type</option>
+                            </select>
+                        </div>
+                        <div class="modal-group--body--field">
+                            <div>
+                                <span style="font-weight: 600; ">Birthday SMS Wish</span>
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                    <div class="dropdown-content">
+                                        <p>If you wish to capture birthdays for the purpose of sending out your birthday
+                                            SMS wishes, this will enable/disable it for this group. If enabled here and
+                                            under settings, a message will be sent back to the user to enter their birth
+                                            date after subscribing to this group and also send them your birthday SMS
+                                            wish.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-group--body--field--switch">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round" style="background-color: #ccc;"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-group--body--field">
+                            <div>
+                                <span style="font-weight: 600; ">Message</span>
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                    <div class="dropdown-content">
+                                        <p>
+                                        <ol style='padding-left:10px'>
+                                            <li>Include your business or program name.</li><br />
+                                            <li>Include number of messages that users will receive per month (Example:
+                                                'Get 5 msgs/month').</li><br />
+                                            <li>Include a link to your T&C/Privacy Policy or a number where they can
+                                                reach you at.</li><br />
+                                            <li>If you are going to be sending messages from an alphanumeric sender ID,
+                                                then you must offer your users the ability to opt out by writing to your
+                                                support team, calling your support phone line, or texting STOP to your
+                                                number. We recommend that you provide your users with a clear
+                                                description in your terms of services.</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea rows="4" cols="70"></textarea>
+                        </div>
+                        <div class="modal-group--body--field">
+                            <p style="font-weight: 600; ">Mandatory Appended Message</p>
+                            <textarea rows="4" cols="70"></textarea>
+                        </div>
+                        <div class="modal-group--body--field">
+                            <div>
+                                <span style="font-weight: 600; ">If Member Message</span>
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                    <div class="dropdown-content">
+                                        <p>This is the message that gets sent if someone who is already subscribed to
+                                            your list sends in the keyword again.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <textarea rows="4" cols="70"></textarea>
+                        </div>
+                        <div class="modal-group--body--field">
+                            <div>
+                                <span style="font-weight: 600; ">Double Opt-In</span>
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                    <div class="dropdown-content">
+                                        <p>Optionally make any sign-ups to this group double opt-in. When someone texts
+                                            in the keyword or signs up via the web-widget, a 2nd text will be sent to
+                                            them asking to confirm the sign-up.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-group--body--field--switch">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round" style="background-color: #ccc;"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-group--body--field">
+                            <div>
+                                <span style="font-weight: 600;  ">Notify Sign-Up</span>
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                    <div class="dropdown-content">
+                                        <p>Have the option to be notified via SMS whenever someone subscribes to this
+                                            group. The notification will include the number that subscribed and the
+                                            group they subscribed to.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-group--body--field--switch">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round" style="background-color: #ccc;"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-primary"
+                        style="background-color: #22B573; border: none;">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GET NEW NUMBER MODAL -->
+
+    <div id="myModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-import--header">
+                        <div class="modal-import--header--title">
+                            <img src="../Icons/iconsD-67.png" width="10%" height="20%" />
+                            <p style="font-weight: 600;">GET NEW NUMBER</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="padding-right: 3.5%; padding-top:0% ;"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-number-body">
+                        <div class="modal-number-body-note">
+                            <p>
+                                NOTE: It's best to get Toll-Free numbers (800, 888, 877, 866, 855, 844 and
+                                833)
+                                when
+                                sending Bulk SMS. They are intended for A2P traffic and allow for a higher
+                                rate
+                                of
+                                sending. Local long codes are best for P2P communication like 2-way SMS
+                                chat,
+                                customer support, etc..
+                            </p>
+                        </div>
+                        <div class="modal-body-country">
+                            <p>Country</p>
+                            <div style="width:50%;">
+                                <select style="width:200px ; opacity: 40%; border-radius: 10px; padding: 8px;">
+                                    <option>Canada</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-body-select">
+                            <p>Select Type</p>
+                            <div style="width:50%;">
+                                <select style="width:200px ; opacity: 40%; border-radius: 10px; padding: 8px;">
+                                    <option>Toll free</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-body-area-code">
+                            <div class="modal-body-area-code-text" style="width:50%;">
+                                <p>Please enter Area code to search for number</p>
+                                <p style="font-size:12px; opacity: 50%;">Area Code(like 815)</p>
+                            </div>
+                            <div style="width:50%;">
+                                <input type="text" placeholder="Optional"
+                                    style="width:200px ; opacity: 40%; font-style: italic; border-radius: 10px; padding: 8px;">
+                            </div>
+
+                        </div>
+                        <div class="modal-body-contains">
+                            <div class="modal-body-contains-text" style="width:50%;">
+                                <p>Please enter Contains to search for number</p>
+                                <p style="font-size:12px; opacity: 50%;">Contains(like STORM)</p>
+                            </div>
+                            <div style="width:50%;">
+                                <input type="text" placeholder="Optional"
+                                    style="width:200px ; opacity: 40%; font-style: italic; border-radius: 10px; padding: 8px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+
+                    <button type="button" class="btn btn-primary"
+                        style="background-color: #22B573; border: none;">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- IMPORT CONTACTS MODAL -->
+
+    <div id="myModal3" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-import--header">
+                        <div class="modal-import--header--title">
+                            <img src="../Icons/iconsD-68.png" width="10%" height="20%" />
+                            <p style="font-weight: 600;">Import Contacts</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="padding-right: 3.5%; padding-top:0% ;"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-import--body">
+                        <div class="modal-import--body--upload">
+                            <p style="font-weight: 600;">CSV Contacts File To Upload</p>
+                            <div class="modal-import--body--upload--file">
+                                <input type="file" name="uploadfile" id="img" style="display:none;" />
+                                <label for="img">Pick File</label>
+                            </div>
+                        </div>
+                        <div class="modal-import--body--info">
+                            <p>Please upload CSV file only. NO spaces, dashes, or parentheses in phone numbers</p>
+                        </div>
+                        <div class="modal-import--body--important">
+                            <p>
+                                IMPORTANT<br>The 1st row of the file should be a column header row.
+                                This is how you will map the CSV columns sto the contact fields on the next page.
+                                If you have a large list (>25000). It's recommended to split your file int multiple
+                                csv files and import those into seperate groups.
+                            </p>
+                        </div>
+                        <div class="modal-import--body--declaration">
+                            <div>
+                                <span style="font-weight: 600; ">Yes, these imported contacts are 100% opt-in.</span>
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                    <div class="dropdown-content">
+                                        <p>These contacts must be 100% opt-in and have already given permission to you
+                                            to receive SMS notifications. This import utility is intended to be used
+                                            when migrating over your list of opt-in contacts from another service or
+                                            collected from your website which clearly states why you're collecting phone
+                                            numbers. If importing contacts that are NOT opt-in, your account with us
+                                            will be banned.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-group--body--field--switch">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round" style="background-color: #ccc;"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+
+                    <button type="button" class="btn btn-primary"
+                        style="background-color: #22B573; border: none;">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CONTACT PAGE MODAL -->
+
+    <div id="single-sms" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-header--title">
+                        <img src="../Icons/contactsicons-59.png" alt="logo" width="12%" height="20%">
+                        <p style="font-weight: 600;">SEND A SINGLE MESSAGE</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="margin: 0px;"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body--inputs">
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Phone Number</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Message</p>
+                            <input type="text" />
+                        </div>
+                        <p>Remaining Characters 150</p>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-primary"
+                        style="background-color: #22B573; border:none;">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="edit-contact" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-header--title">
+                        <img src="../img/New folder (3)/contactsicons-57.png" width="18%" height="20%" />
+                        <p style="font-weight: 600;">EDIT CONTACT</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="margin: 0px; margin-right: 1%;"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-edit-inputs">
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Phone Number</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Message</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Name</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Phone Number</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Fax Number</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Email</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Birthday</p>
+                            <input type="date" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">City</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">State</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Postal Code</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <div class="modal-body--input--important">
+                                <p>
+                                    NOTE: It's best to get Toll-Free numbers (800, 888, 877, 866, 855, 844 and
+                                    833) when sending Bulk SMS. They are intended for A2P traffic and allow for a higher
+                                    rate of sending. Local long codes are best for P2P communication like 2-way SMS
+                                    chat, customer support, etc..
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Custom Field 1</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Custom Field 2</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Custom Field 3</p>
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+
+                    <button type="button" class="btn btn-primary"
+                        style="background-color: #22B573; border: none;">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="send-email" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-header--title">
+                        <img src="../img/New folder (3)/contactsicons-58.png" width="18%" height="20%" />
+                        <p style="font-weight: 600;">SEND EMAIL</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="margin: 0px; margin-right: 1%;"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body--inputs">
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">From</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">To</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Cc</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Bcc</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Reply To</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Request Read Receipt</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Upload Attachment</p>
+                            <div class="upload-image-buttons--email">
+                                <label for="upload-image-button-email" class="upload-image-button-email">Select
+                                    Image</label>
+                                <input type="file" id="upload-image-button-email" style="display: none;" />
+                            </div>
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Subject</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input--body">
+                            <p style="font-weight: 600;">Body</p>
+                            <div id="editor">
+                                <p>Write Your Message Here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+
+                    <button type="button" class="btn btn-primary"
+                        style="background-color: #22B573; border:none;">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="activity-logs" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-header--title">
+                        <img src="../img/New folder (3)/contactsicons-58.png" width="18%" height="20%" />
+                        <p style="font-weight: 600;">Logs</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="margin: 0px; margin-right: 1%;"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body--inputs">
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Phone Number</p>
+                            <p style="text-align: left;">12092315943</p>
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Text Message</p>
+                            <p style="text-align: left;">This is another test message.</p>
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Route</p>
+                            <p style="text-align: left;">inbox</p>
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Created</p>
+                            <p style="text-align: left;">2022-08-17 13:19:21</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+
+                    <button type="button" class="btn btn-primary"
+                        style="background-color: #22B573; border:none;">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CONTACT MODAL END -->
+
+    <!-- CHATBOX MODAL START -->
+
+    <div id="open-note" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header--title">
+                        <img src="../Icons/email-icon.png" alt="logo" width="20%">
+                        <p style="font-weight: 600;">NOTE</p>
+                    </div>
+                    <div class="modal-header--close">
+                        <button type="button" data-bs-dismiss="modal">
+                            <img src="../Icons/close-icon.png" alt="close" width="80%">
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body--inputs">
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Note</p>
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Add Note</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="open-note-more" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header--title">
+                        <img src="../Icons/email-icon.png" alt="logo" width="20%">
+                        <p style="font-weight: 600;">NOTE</p>
+                    </div>
+                    <div class="modal-header--close">
+                        <button type="button" data-bs-dismiss="modal">
+                            <img src="../Icons/close-icon.png" alt="close" width="80%">
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body--title">
+                        <p style="font-weight: 700">Name</p>
+                        <p style="font-weight: 700">Note</p>
+                        <p style="font-weight: 700">Date/Time</p>
+                        <p style="font-weight: 700">Actions</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#open-note">Add
+                        Note</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="upload-image" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header--title">
+                        <img src="../Icons/email-icon.png" alt="logo" width="20%">
+                        <p style="font-weight: 600;">UPLOAD IMAGE</p>
+                    </div>
+                    <div class="modal-header--close">
+                        <button type="button" data-bs-dismiss="modal">
+                            <img src="../Icons/close-icon.png" alt="close" width="80%">
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="upload-box">
+                        <div class="upload-image-show">
+                            <img src="../img/profile-icon-9.png" class="upload-image" id="upload-image-src">
+                        </div>
+                        <div class="upload-image-buttons">
+                            <label for="upload-image-button" class="upload-image-button">Select Image</label>
+                            <input type="file" onchange="loadFile(event)" id="upload-image-button"
+                                style="display: none;" />
+                            <button type="button" class="btn btn-primary">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="file" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CHATBOX MODAL END -->
+
+
+    <!-- Modals END -->
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+    <script src="../js/graph.js"></script>
+    <script src="../js/pick.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+        integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+        crossorigin="anonymous"></script>
+    <script src="../js/plugins.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- CSS
+================================================== -->
+    <!-- Used Bootstrap Version 5.2.0 in this file for better performanance.
+    In other files wherever not mentioned, the version used is 4.0.0     -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/jquery.webui-popover.css" />
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="../css/activity.css" />
+</head>
+
+<body>
+    <div class="activity">
+        <div class="activity-navbar">
+            <div class="activity-navbar--number">
+                <p style="font-weight: 600;">Log Type</p>
+                <select name="device" id="device">
+                    <option value="">Select Device</option>
+                    <option value="1">Device 1</option>
+                    <option value="2">Device 2</option>
+                    <option value="3">Device 3</option>
+                </select>
+            </div>
+            <div class="activity-navbar--icons">
+                <div class="container">
+                    <img src="../img/icons/icons-copy.png" class="image" />
+                    <div class="overlay">
+                        <div class="text">Copy</div>
+                    </div>
+                </div>
+                <div class="container">
+                    <img src="../img/icons/icons-xx.png" class="image" style="margin: 0px;"/>
+                    <div class="overlay">
+                      <div class="text">Quit</div>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <img src="../img/icons/icons-printer.png"  class="image"/>
+                    <div class="overlay">
+                      <div class="text">Print</div>
+                    </div>
+                  </div>
+                  <div class="container">
+                    <img src="../img/icons/icons-3-bars.png" class="image"/>
+                    <div class="overlay">
+                      <div class="text">Activity</div>
+                    </div>
+                  </div>
+
+                <!-- <img src="../img/icons/icons-xx.png" width="5%" />
+                <img src="../img/icons/icons-printer.png" width="5%" />
+                <img src="../img/icons/icons-3-bars.png" width="5%" /> -->
+            </div>
+        </div>
+        <div class="activity-body">
+            <div class="activity-search">
+                <div class="activity-search--header">
+                    <p style="font-weight: 600;">Search Messages</p>
+                </div>
+                <div class="activity-search--input">
+                    <div class="activity-search--input--field">
+                        <img src="../img/icons/icons-05.png" width="5%" height="5%" />
+                        <label for="device">Select Device</label>
+                        <select name="device" id="device">
+                            <option value="">Select Device</option>
+                            <option value="1">Device 1</option>
+                            <option value="2">Device 2</option>
+                            <option value="3">Device 3</option>
+                        </select>
+                    </div>
+                    <div class="activity-search--input--field">
+                        <img src="../img/icons/icons-05.png" width="5%" height="5%" />
+                        <label for="phone">Mobile Number</label>
+                        <input type="tel" name="phone" id="phone" />
+                    </div>
+                    <div class="activity-search--input--field">
+                        <img src="../img/icons/icons-05.png" width="5%" height="5%" />
+                        <label for="status">Status</label>
+                        <select name="status" id="status">
+                            <option value="">Select Device</option>
+                            <option value="1">Device 1</option>
+                            <option value="2">Device 2</option>
+                            <option value="3">Device 3</option>
+                        </select>
+                    </div>
+                    <div class="activity-search--input--field">
+                        <img src="../img/icons/icons-05.png" width="5%" height="5%" />
+                        <label for="message0">Message</label>
+                        <input type="text" name="message" id="message" />
+                    </div>
+                    <div class="activity-search--input--field">
+                        <img src="../img/icons/icons-05.png" width="5%" height="5%" />
+                        <label for="start-date">Start Date</label>
+                        <input type="date" name="start-date" id="start-date" />
+                    </div>
+                    <div class="activity-search--input--field">
+                        <img src="../img/icons/icons-05.png" width="5%" height="5%" />
+                        <label for="end-date">End Date</Em></label>
+                        <input type="date" name="end-date" id="end-date" />
+                    </div>
+                </div>
+                <div class="activity-search--buttons">
+                    <div class="activity-search--buttons--button">
+                        <button>Search</button>
+                    </div>
+                    <div class="activity-search-buttons--records">
+                        <label for="records">Number Of Records</label>
+                        <select>
+                            <option value="60">60</option>
+                            <option value="100">100</option>
+                            <option value="120">120</option>
+                            <option value="150">150</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-page-last-div">
+                <div class="activity-page-last-div-navbar">
+                    <div class="activity-page-last-div-navbar-left">
+                        <p>Read</p>
+                        <p>From Number</p>
+                        <p>To Number</p>
+                        <p>Name</p>
+                    </div>
+                    <div class="activity-page-last-div-navbar-right">
+                        <div class="activity-page-last-div-navbar-right-message-status">
+                            <p>Messages</p>
+                            <p>Created</p>
+                            <p>Status</p>
+                        </div>
+
+                        <p style="width: 20%; display: flex; justify-content:flex-start;">Actions</p>
+
+                    </div>
+                </div>
+                <div class="activity-page-last-div-first-row">
+                    <div class="activity-page-last-div-first-row-left">
+                        <img src="../img/icons/right icon.png" width="100%" height="100%"
+                            style="width:5%; height: auto;">
+                        <p>From Number</p>
+                        <p>To Number</p>
+                        <p>Name</p>
+                    </div>
+                    <div class="activity-page-last-div-first-row-right">
+                        <div class="activity-page-last-div-navbar-right-message-status">
+                            <p>Messages</p>
+                            <p>Created</p>
+                            <p>Status</p>
+                        </div>
+                        <div class=".contact-page-last-div-first-row-right-icons"
+                            style="width: 20%; display: flex; justify-content:flex-start; column-gap: 10px;">
+                            <img src="../img/icons/icons-eye.png" width="20%" height="20%">
+                            <img src="../img/icons/icons-message.png" width="20%" height="20%">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="activity-page-last-div-first-row">
+                    <div class="activity-page-last-div-first-row-left">
+                        <img src="../img/icons/right icon.png" width="100%" height="100%"
+                            style="width:5%; height: auto;">
+                        <p>From Number</p>
+                        <p>To Number</p>
+                        <p>Name</p>
+                    </div>
+                    <div class="activity-page-last-div-first-row-right">
+                        <div class="activity-page-last-div-navbar-right-message-status">
+                            <p>Messages</p>
+                            <p>Created</p>
+                            <p>Status</p>
+                        </div>
+                        <div class=".activity-page-last-div-first-row-right-icons"
+                            style="width: 20%; display: flex; justify-content:flex-start; column-gap: 10px;">
+                            <img src="../img/icons/icons-eye.png" width="20%" height="20%">
+                            <img src="../img/icons/icons-message.png" width="20%" height="20%">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/graph.js"></script>
+        <script src="../js/pick.js"></script>
+        <script src="../js/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+            integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+            integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+            crossorigin="anonymous"></script>
+        <script src="../js/plugins.js"></script>
+</body>
+
+</html>
+
+<div class="modal-header border-0">
+    <div class="modal-header--title">
+        <img src="../img/New folder (3)/contactsicons-57.png" width="18%" height="20%" />
+        <p style="font-weight: 600; font-size: 18px;">Edit Contact</p>
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+        style="margin: 0px; margin-right: 1%;"></button>
+</div>
+<div class="modal-body">
+    <div class="modal-body-edit-inputs">
+        <div class="modal-body--input">
+            <p style="font-weight: 600;">Phone Number</p>
+            <input type="text" />
+        </div>
+        <div class="modal-body--input">
+            <p style="font-weight: 600;">Message</p>
+            <input type="text" />
+        </div>
+        <div class="modal-body--input">
+            <p style="font-weight: 600;">Name</p>
+            <input type="text" />
+        </div>
+        <div class="modal-body--input">
+            <p style="font-weight: 600;">Phone Number</p>
+            <input type="text" />
+        </div>
+        <div class="modal-body--input">
+            <p style="font-weight: 600;">Fax Number</p>
+            <input type="text" />
+        </div>
+        <div class="modal-body--input">
+            <p style="font-weight: 600;">Email</p>
+            <input type="text" />
+        </div>
+        <div class="modal-body--input">
+            <p style="font-weight: 600;">Birthday</p>
+            <input type="date" />
+        </div>
+        <div class="modal-body--input">
+            <p style="font-weight: 600;">City</p>
+            <input type="text" />
+        </div>
+        <div class="modal-body--input">
+            <p style="font-weight: 600;">State</p>
+            <input type="text" />
+        </div>
+        <div class="modal-body--input">
+            <p style="font-weight: 600;">Postal Code</p>
+            <input type="text" />
+        </div>
+        <div class="modal-body--input">
+            <div class="modal-body--input--important">
+                <p>
+                    NOTE: It's best to get Toll-Free numbers (800, 888, 877, 866, 855, 844 and
+                    833) when sending Bulk SMS. They are intended for A2P traffic and allow for a higher
+                    rate of sending. Local long codes are best for P2P communication like 2-way SMS
+                    chat, customer support, etc..
+                </p>
+            </div>
+        </div>
+        <div class="modal-body--input">
+            <p style="font-weight: 600;">Custom Field 1</p>
+            <input type="text" />
+        </div>
+        <div class="modal-body--input">
+            <p style="font-weight: 600;">Custom Field 2</p>
+            <input type="text" />
+        </div>
+        <div class="modal-body--input">
+            <p style="font-weight: 600;">Custom Field 3</p>
+            <input type="text" />
+        </div>
+    </div>
+<div class="modal-footer border-0">
+
+    <button type="button" class="btn btn-primary"
+        style="background-color: #22B573; border: none;">Submit</button>
+</div>

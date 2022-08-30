@@ -1,0 +1,590 @@
+.modal-group,
+.modal-import {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    position: relative;
+    left: 25%;
+    row-gap: 20px;
+    padding: 30px;
+}
+
+.modal-group--header,
+.modal-import--header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal-group--header--title,
+.modal-import--header--title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 15px;
+}
+
+.modal-group--body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    row-gap: 10px;
+}
+
+.modal-group--body--field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    column-gap: 30px;
+}
+
+.modal-group--body--field input,
+.modal-group--body--field textarea,
+.modal-group--body--field select {
+    box-sizing: border-box;
+    width: 40%;
+}
+
+.modal-import--body--upload input,
+.modal-import--body--upload label {
+    box-sizing: border-box;
+    /* width: 40%; */
+}
+
+.modal-group--footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-group--footer--submit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-group--body--field select {
+    border-radius: 7px;
+    padding: 3px;
+}
+
+.modal-group--body--field textarea {
+    background-color: #E9E9E9;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.modal-group--body--field input {
+    background-color: #E9E9E9;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 2.5px;
+    background-color: rgb(230, 33, 33);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.modal-group--body--field--switch {
+    width: 40%;
+}
+
+.modal-group--footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-group--footer--submit button {
+    background-color: rgb(35, 154, 35);
+    width: 100px;
+    height: 30px; 
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.modal-import--body {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 100%;
+    row-gap: 10px;
+}
+
+.modal-import--body--upload {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    width: 80%;
+    column-gap: 20px;
+}
+
+.modal-import--body--upload--file {
+    background-color: black;
+    color: white;
+    padding: 5px 7px 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-import--body--upload--file label {
+    cursor: pointer;
+}
+
+.modal-import--body--info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+
+.modal-import--body--info p {
+    text-align: left;
+    font-size: 14px;
+}
+
+.modal-import--body--important {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    background-color: rgba(249, 160, 160, 0.8);
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.modal-import--body--important p {
+    text-align: left;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 10px 20px 10px 20px;
+}
+
+.modal-import--body--declaration {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    column-gap: 20px;
+}
+
+.modal-import--footer--submit button {
+    background-color: rgb(35, 154, 35);
+    width: 100px;
+    height: 30px; 
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* MODAL GET NEW NUMBER */
+
+.modal-number-body{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 10px;
+}
+
+.modal-number-body-note{
+    background-color: rgba(249, 160, 160, 0.8);
+    border-radius: 6px;
+    font-size: 12px;
+    padding: 20px;
+    font-weight: 600;
+
+}
+.modal-number-body-note p{
+    margin-bottom: 0px;
+}
+
+.modal-body-country{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.modal-body-country p {
+    width: 50%;
+    text-align: end;
+    margin: 0px;
+    font-weight: 600;
+}
+
+
+.modal-body-select{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal-body-select p {
+    width: 50%;
+    text-align: end;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+.modal-body-area-code{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal-body-area-code-text p{
+    text-align: end;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+.modal-body-contains{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-body-contains-text p{
+    text-align: end;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+.modal-number-body-footer{
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 10px;
+}
+
+/* CONTACT PAGE MODAL */
+
+.modal-header--title {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.modal-header--title p {
+    margin: 0;
+}
+
+.modal-header--close {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+.modal-header--close button {
+    border: none;
+    background: none
+}
+
+.modal-body--inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body--input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    column-gap: 30px;
+}
+
+.modal-body--input input {
+    box-sizing: border-box;
+    width: 40%;
+    background-color: #E9E9E9;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+
+.modal-body--input p {
+    text-align: right;
+    width: 30%;
+    margin: 0;
+}
+
+.modal-body--input--body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body-edit-inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body--input--important {
+    background-color: rgba(249, 160, 160, 0.8);
+    border-radius: 6px;
+    font-size: 12px;
+    padding: 20px;
+    font-weight: 600;
+    width: 80%;
+}
+
+.modal-body--input--important p {
+    width: 100%;
+}
+
+/* CONTACT PAGE MODAL END */
+
+/* CHATBOX MODAL */
+.modal-header--title {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.modal-header--title p {
+    margin: 0;
+}
+
+.modal-header--close {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 10%;
+}
+
+.modal-header--close button {
+    border: none;
+    background: none
+}
+
+.modal-body--inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body--input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    column-gap: 30px;
+}
+
+.modal-body--input input {
+    box-sizing: border-box;
+    width: 40%;
+    background-color: #E9E9E9;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+
+.modal-body--input p {
+    text-align: right;
+    width: 30%;
+    margin: 0;
+}
+
+.modal-body--input--body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body-edit-inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body--input--important {
+    background-color: rgb(249, 160, 160);
+    border-radius: 6px;
+    font-size: 12px;
+    padding: 20px;
+    font-weight: 600;
+    width: 80%;
+}
+
+.modal-body--input--important p {
+    width: 100%;
+}
+
+.modal-body--title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    column-gap: 30px;
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: 100%;
+    row-gap: 10px;
+}
+
+.upload-image-show {
+    width: 50%;
+    height: max-content;
+}
+
+.upload-image-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    column-gap: 10px;
+}
+
+.upload-image-buttons--email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40%;
+    column-gap: 10px;
+}
+
+.upload-image {
+    width: 100%;
+    height: 100%;
+    background-color: #E9E9E9;
+}
+
+.upload-image-button {
+    width: 30%;
+    height: 100%;
+    background-color: #E9E9E9;
+    border: none;
+    border-radius: 10px;
+    font-size: 1vw;
+    font-weight: 600;
+    padding: 2%;
+    cursor: pointer;
+}
+
+.upload-image-button-email {
+    width: 100%;
+    height: 100%;
+    background-color: #22b573;
+    border: none;
+    border-radius: 10px;
+    font-size: 1vw;
+    font-weight: 600;
+    padding: 2%;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+} 
