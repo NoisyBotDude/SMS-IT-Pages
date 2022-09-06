@@ -1,14 +1,14 @@
 body {
     background-image: url("../img/test-drive-gradient.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    width: 100vw;
+    height: 100vh;
 }
 
-.container {
-    max-width: 100%;
+.container-fluid {
     height: 100vh;
-    /* margin: 50px; */
     font-family: "Poppins", sans-serif;
+    padding: 0;
 }
 
 .secure-payment {
@@ -35,11 +35,6 @@ body {
     float: left;
 }
 
-.secure-payment--description--subheader {
-    /* font-size: 24px; */
-    font-weight: 500;
-}
-
 .secure-payment--description--usecases {
     /* list-style: none; */
 }
@@ -61,20 +56,19 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width:60%;
+    width: 60%;
     height: 100vh;
     padding: 20px;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     row-gap: 15px;
 }
 
 .secure-payment--info--header h1 {
     font-size: 46x;
     font-weight: 700;
-    color:rgba(255, 255, 255, 0.6)
-
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .secure-payment--info--input {
@@ -131,68 +125,141 @@ body {
     height: 50px;
     border-radius: 10px;
     text-transform: uppercase;
-	font-weight: 800;
-	cursor: pointer;
-    display: block; 
+    font-weight: 800;
+    cursor: pointer;
+    display: block;
     position: relative;
     border: none;
-	vertical-align: middle;
+    vertical-align: middle;
     overflow: hidden;
-	-webkit-transition: background-color 0.3s;
-	transition: background-color 0.3s;
-	background: #fff;
-	color: #000;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    background: #fff;
+    color: #000;
 }
 
-.secure-payment--info--button--pay > span {
-	display: inline-block;
-	padding: 1em 0;
-	opacity: 0;
+.secure-payment--info--button--pay>span {
+    display: inline-block;
+    padding: 1em 0;
+    opacity: 0;
     vertical-align: middle;
-	color: #fff;
-	-webkit-transform: translate3d(0, -10px, 0);
-	transform: translate3d(0, -10px, 0);
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    color: #fff;
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
+
 .secure-payment--info--button--pay::before {
-	content: attr(data-text);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	padding: 1em 0;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
+
 .secure-payment--info--button--pay:hover {
-	background-color: #000;
-	/* color: #fff; */
+    background-color: #000;
+    /* color: #fff; */
 }
+
 .secure-payment--info--button--pay:hover::before {
-	opacity: 0;
-	-webkit-transform: translate3d(0, 100%, 0);
-	transform: translate3d(0, 100%, 0);
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
 }
-.secure-payment--info--button--pay:hover > span {
-	opacity: 1;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
+
+.secure-payment--info--button--pay:hover>span {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
-.secure-payment--info--button--pay:hover > span:nth-child(1) {
-	-webkit-transition-delay: 0.045s;
-	transition-delay: 0.07s;
+
+.secure-payment--info--button--pay:hover>span:nth-child(1) {
+    -webkit-transition-delay: 0.045s;
+    transition-delay: 0.07s;
 }
-.secure-payment--info--button--pay:hover > span:nth-child(2) {
-	-webkit-transition-delay: 0.09s;
-	transition-delay: 0.14s;
+
+.secure-payment--info--button--pay:hover>span:nth-child(2) {
+    -webkit-transition-delay: 0.09s;
+    transition-delay: 0.14s;
 }
-.secure-payment--info--button--pay:hover > span:nth-child(3) {
-	-webkit-transition-delay: 0.135s;
-	transition-delay: 0.21s;
+
+.secure-payment--info--button--pay:hover>span:nth-child(3) {
+    -webkit-transition-delay: 0.135s;
+    transition-delay: 0.21s;
+}
+
+@media screen and (max-width: 991px) {
+    .secure-payment--info--input {
+        width: 80%;
+    }
+
+    .secure-payment--info--button {
+        width: 80%;
+    }
+
+    .secure-payment--info--link {
+        width: 80%;
+    }
+
+    .secure-payment-description--amount {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .secure-payment {
+        flex-direction: column;
+    }
+
+    .secure-payment--description {
+        width: 100%;
+        row-gap: 5px;
+        margin: 5%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .secure-payment--description h1 {
+        width: 80%;
+    }
+
+    .secure-payment--description--usecases {
+        width: 90%;
+    }
+
+    .secure-payment--description p {
+        width: 80%;
+    }
+
+    .secure-payment--description--subheader {
+        width: 100%;
+    }
+
+    .secure-payment--info {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .secure-payment--info--link {
+        flex-direction: column;
+    }
+
+    .secure-payment-description--amount h4,
+    .secure-payment-description--amount h1 {
+        font-size: 20px;
+    }
+
+    .secure-payment-description--amount {
+        width: 40%;
+    }
 }

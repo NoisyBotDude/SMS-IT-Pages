@@ -1,14 +1,16 @@
 body {
     background-image: url("../img/test-drive-gradient.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    /* background-size: cover; */
+    width: 100vw;
+    height: 100vh;
 }
 
-.container {
-    max-width: 100%;
+.container-fluid {
+    /* max-width: 100%; */
     height: 100vh;
     font-family: "Poppins", sans-serif;
-    
+    padding: 0;
 }
 
 .login {
@@ -32,20 +34,12 @@ body {
 }
 
 .login-description h1 {
-    position: relative;
-    left: -40px;
     font-size: 62px;
     font-weight: 600;
-}
-
-.login-description--subheader {
-    font-size: 24px;
-    font-weight: 500;
+    width: 50%;
 }
 
 .login-description p {
-    position: relative;
-    left: 25px;
     width: 50%;
 }
 
@@ -59,7 +53,7 @@ body {
     padding: 20px;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
     row-gap: 15px;
 }
 
@@ -100,79 +94,88 @@ body {
     height: 50px;
     border-radius: 10px;
     text-transform: uppercase;
-	font-weight: 800;
-	cursor: pointer;
+    font-weight: 800;
+    cursor: pointer;
     outline: none;
-    display: block; 
+    display: block;
     position: relative;
     border: none;
-	vertical-align: middle;
+    vertical-align: middle;
     overflow: hidden;
-	-webkit-transition: background-color 0.3s;
-	transition: background-color 0.3s;
-	background: #fff;
-	color: #000;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    background: #fff;
+    color: #000;
 }
 
-.login-info--button--log > span {
-	display: inline-block;
-	padding: 1em 0;
-	opacity: 0;
+.login-info--button--log>span {
+    display: inline-block;
+    padding: 1em 0;
+    opacity: 0;
     vertical-align: middle;
-	color: #fff;
-	-webkit-transform: translate3d(0, -10px, 0);
-	transform: translate3d(0, -10px, 0);
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    color: #fff;
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
+
 .login-info--button--log::before {
-	content: attr(data-text);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	padding: 1em 0;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	-webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
-	transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
+
 .login-info--button--log:hover {
-	background-color: #000;
-	/* color: #fff; */
+    background-color: #000;
+    /* color: #fff; */
 }
+
 .login-info--button--log:hover::before {
-	opacity: 0;
-	-webkit-transform: translate3d(0, 100%, 0);
-	transform: translate3d(0, 100%, 0);
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
 }
-.login-info--button--log:hover > span {
-	opacity: 1;
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
+
+.login-info--button--log:hover>span {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
-.login-info--button--log:hover > span:nth-child(1) {
-	-webkit-transition-delay: 0.045s;
-	transition-delay: 0.06s;
+
+.login-info--button--log:hover>span:nth-child(1) {
+    -webkit-transition-delay: 0.045s;
+    transition-delay: 0.06s;
 }
-.login-info--button--log:hover > span:nth-child(2) {
-	-webkit-transition-delay: 0.09s;
-	transition-delay: 0.12s;
+
+.login-info--button--log:hover>span:nth-child(2) {
+    -webkit-transition-delay: 0.09s;
+    transition-delay: 0.12s;
 }
-.login-info--button--log:hover > span:nth-child(3) {
-	-webkit-transition-delay: 0.135s;
-	transition-delay: 0.18s;
+
+.login-info--button--log:hover>span:nth-child(3) {
+    -webkit-transition-delay: 0.135s;
+    transition-delay: 0.18s;
 }
-.login-info--button--log:hover > span:nth-child(4) {
-	-webkit-transition-delay: 0.18s;
-	transition-delay: 0.24s;
+
+.login-info--button--log:hover>span:nth-child(4) {
+    -webkit-transition-delay: 0.18s;
+    transition-delay: 0.24s;
 }
-.login-info--button--log:hover > span:nth-child(5) {
-	-webkit-transition-delay: 0.315s;
-	transition-delay: 0.30s;
+
+.login-info--button--log:hover>span:nth-child(5) {
+    -webkit-transition-delay: 0.315s;
+    transition-delay: 0.30s;
 }
 
 .login-info--link {
@@ -188,4 +191,47 @@ body {
     font-size: 14px;
     font-weight: 500;
     color: #fff;
+}
+
+@media screen and (max-width: 991px) {
+    .login-info--input {
+        width: 80%;
+    }
+
+    .login-info--button {
+        width: 80%;
+    }
+
+    .login-info--link {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .login {
+        flex-direction: column;
+    }
+
+    .login-description {
+        width: 100%;
+        row-gap: 5px;
+        margin: 5%;
+    }
+
+    .login-description h1 {
+        width: 80%;
+    }
+
+    .login-description p {
+        width: 80%;
+    }
+
+    .login-info {
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .login-info--link {
+        flex-direction: column;
+    }
 }
