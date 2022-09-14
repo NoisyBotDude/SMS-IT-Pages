@@ -805,6 +805,13 @@ input:checked+.slider:before {
     width: 50%;
 }
 
+.spin-question-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 .number-of-characters-right-top-bottoms button {
     border: none;
     border-radius: 7px;
