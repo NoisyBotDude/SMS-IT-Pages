@@ -588,3 +588,159 @@ margin: 10px;
     text-align: center;
     font-size: 14px;
 } 
+
+/* ADD VOICE BROADCAST */
+
+.modal-voice-broadcast {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 30px;
+}
+
+.modal-voice-broadcast--input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal-voice-broadcast--input p {
+    width: 50%;
+}
+
+.modal-voice-broadcast--input select {
+    width: 50%;
+}
+
+.modal-voice-broadcast--groups {
+    width: 75%;
+}
+
+/* ADD VOICE BROADCAST END */
+
+/* SMS Gateway and SMPP */
+
+.modal-body-gateway-inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body-cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    row-gap: 20px;
+    column-gap: 20px;
+    height: 80%;
+}
+
+.modal-body-cards-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 80%;
+    row-gap: 20px;
+    padding: 20px;
+    padding-top: 40px;
+    border-radius: 10px;
+    background-color: #E9E9E9;
+}
+
+.modal-body-card-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.modal-body-card-img i {
+    font-size: 40px;
+}
+
+/* SMS Gateway And SMPP END */
+
+/* CONNECT SIM CARD */
+
+.modal-body-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    row-gap: 20px;
+}
+
+.modal-body-content-info-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    column-gap: 10px;
+    padding: 6%;
+    border-radius: 10px;
+    background-color: #E9E9E9;
+}
+
+.modal-body-content-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-body-content-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.modal-body-card-title p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 600;
+    text-align: center;
+}
+
+.modal-body-card-button {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body-card-button button {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 1vw;
+    font-weight: 500;
+    padding: 5%;
+    cursor: pointer;
+    color: white;
+}
+
+/* CONNECT SIM CARD END */
