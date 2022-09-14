@@ -1861,10 +1861,6 @@ input:checked+.slider:before {
 
 /* DROPDOWN QUESTION MARK ICON */
 
-.hide {
-    display: none;
-}
-
 .dropdown {
     position: relative;
     display: inline-block;
@@ -1883,4 +1879,10 @@ input:checked+.slider:before {
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/* DROPDOWN QUESTION MARK ICON END */
+
+.hide {
+    display: none;
 }

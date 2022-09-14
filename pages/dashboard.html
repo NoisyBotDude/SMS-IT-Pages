@@ -1791,6 +1791,466 @@
 
     <!-- CHATBOX MODAL END -->
 
+    <!-- SMS GATEWAY AND SMPP MODAL -->
+
+    <div id="smpp-server" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header--title">
+                        <img src="../Icons/edit-icon.png" alt="logo" width="20%">
+                        <p style="font-weight: 600; font-size: 18px;">SMPP Server</p>
+                    </div>
+                    <div class="modal-header--close">
+                        <button type="button" data-bs-dismiss="modal">
+                            <img src="../Icons/close-icon.png" alt="close" width="70%">
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-edit-inputs">
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">SMPP Host</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">SMPP Port</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">SMPP Username</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">SMPP Password</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">SMPP Sender ID</p>
+                            <input type="text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="smpp-gateways" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header--title">
+                        <img src="../Icons/edit-icon.png" alt="logo" width="20%">
+                        <p style="font-weight: 600; font-size: 18px;">SMPP Gateways</p>
+                    </div>
+                    <div class="modal-header--close">
+                        <button type="button" data-bs-dismiss="modal">
+                            <img src="../Icons/close-icon.png" alt="close" width="70%">
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-edit-inputs">
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">SMS Gateway</p>
+                            <select name="sms-gateway-select" id="sms-gateway-select">
+                                <option value="option-select-sms-gateway" default>Select SMS Gateway</option>
+                                <option value="option-bandwidth">Bandwidth</option>
+                                <option value="option-nexmo">Nexmo</option>
+                                <option value="option-plivo">Plivo</option>
+                                <option value="option-signal-wire">Signal Wire</option>
+                                <option value="option-slooce">Slooce</option>
+                                <option value="option-telnyx">Telnyx</option>
+                                <option value="option-sms-it-gateway">SMS-iT Gateway</option>
+                                <option value="option-twilio">Twilio</option>
+                                <option value="option-ytel">Ytel</option>
+                            </select>
+                        </div>
+                        <div class="modal-body-gateway-inputs active" id="option-select-sms-gateway">
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway ID/Key</p>
+                                <input type="text" />
+                            </div>
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway Token/Secret</p>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="modal-body-gateway-inputs hide" id="option-bandwidth">
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway ID/Key</p>
+                                <input type="text" />
+                            </div>
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway Token/Secret</p>
+                                <input type="text" />
+                            </div>
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">Bandwidth Account ID</p>
+                                <input type="text" />
+                            </div>
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">Bandwidth Sub Account ID</p>
+                                <input type="text" />
+                            </div>
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">Bandwidth Location ID</p>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="modal-body-gateway-inputs hide" id="option-nexmo">
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway ID/Key</p>
+                                <input type="text" />
+                            </div>
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway Token/Secret</p>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="modal-body-gateway-inputs hide" id="option-plivo">
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway ID/Key</p>
+                                <input type="text" />
+                            </div>
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway Token/Secret</p>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="modal-body-gateway-inputs hide" id="option-signal-wire">
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway ID/Key</p>
+                                <input type="text" />
+                            </div>
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway Token/Secret</p>
+                                <input type="text" />
+                            </div>
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">Signal Wire Space URL</p>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="modal-body-gateway-inputs hide" id="option-slooce">
+                            
+                        </div>
+                        <div class="modal-body-gateway-inputs hide" id="option-telnyx">
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway ID/Key</p>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="modal-body-gateway-inputs hide" id="option-sms-it-gateway">
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway ID/Key</p>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="modal-body-gateway-inputs hide" id="option-twilio">
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway ID/Key</p>
+                                <input type="text" />
+                            </div>
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway Token/Secret</p>
+                                <input type="text" />
+                            </div>
+                        </div>
+                        <div class="modal-body-gateway-inputs hide" id="option-ytel">
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway ID/Key</p>
+                                <input type="text" />
+                            </div>
+                            <div class="modal-body--input">
+                                <p style="font-weight: 600;">SMS Gateway Token/Secret</p>
+                                <input type="text" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="add-voice-broadcast" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header--title">
+                        <img src="../Icons/edit-icon.png" alt="logo" width="20%">
+                        <p style="font-weight: 600; font-size: 18px;">Add Voice Broadcast</p>
+                    </div>
+                    <div class="modal-header--close">
+                        <button type="button" data-bs-dismiss="modal">
+                            <img src="../Icons/close-icon.png" alt="close" width="70%">
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-edit-inputs">
+                        <div class="modal-body--input">
+                            <div class="modal-body--input--important">
+                                <p>
+                                    NOTE: It's best to get Toll-Free numbers (800, 888, 877, 866, 855, 844 and
+                                    833) when sending Bulk SMS. They are intended for A2P traffic and allow for a higher
+                                    rate of sending. Local long codes are best for P2P communication like 2-way SMS
+                                    chat, customer support, etc..
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-voice-broadcast">
+                            <div class="modal-body--input modal-voice-broadcast--input modal-voice-broadcast--groups">
+                                <p style="font-weight: 600;">Select Groups</p>
+                                <select>
+                                    <option value="0">Select Groups</option>
+                                    <option value="1">Group 1</option>
+                                    <option value="2">Group 2</option>
+                                    <option value="3">Group 3</option>
+                                    <option value="4">Group 4</option>
+                                    <option value="5">Group 5</option>
+                                </select>
+                            </div>
+                            <div class="modal-body--input modal-voice-broadcast--input">
+                                <p style="font-weight: 600;">Voice Broadcast Msg Type</p>
+                                <select>
+                                    <option value="mp3">MP3/MP4A Audio</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="modal-voice-broadcast">
+                            <div class="modal-body--input modal-voice-broadcast--input modal-voice-broadcast--groups">
+                                <p style="font-weight: 600;">Choose File</p>
+                                <div class="modal-import--body--upload--file">
+                                    <input type="file" name="voice-broadcast-file" id="voice-broadcast-file" style="display:none;" />
+                                    <label for="voice-broadcast-file">Pick File</label>
+                                </div>
+                            </div>
+                            <div class="modal-body--input modal-voice-broadcast--input">
+                                <p style="font-weight: 600;">Play</p>
+                                <div class="modal-voice-broadcast--player">
+                                    <i class="fas fa-repeat"></i>
+                                    <i class="fa-solid fa-circle-play"></i>
+                                    <i class="fa-solid fa-volume-high"></i>
+                                    <audio>
+                                        <source src="horse.ogg" type="audio/ogg">
+                                        <source src="horse.mp3" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                    </audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="sms-gateway-and-smpp" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header--title">
+                        <img src="../Icons/edit-icon.png" alt="logo" width="20%">
+                        <p style="font-weight: 600; font-size: 18px;">SMS Gateway And SMPP</p>
+                    </div>
+                    <div class="modal-header--close">
+                        <button type="button" data-bs-dismiss="modal">
+                            <img src="../Icons/close-icon.png" alt="close" width="70%">
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-cards">
+                        <div class="modal-body-cards-card">
+                            <div class="modal-body-card-img">
+                                <i class="fas fa-sim-card"></i>
+                            </div>
+                            <div class="modal-body-card-title">
+                                <p>Connect<br>SIM Card</p>
+                            </div>
+                            <div class="modal-body-card-button">
+                                <button data-bs-toggle="modal" data-bs-target="#connect-sim-card">Connect</button>
+                            </div>
+                        </div>
+                        <div class="modal-body-cards-card">
+                            <div class="modal-body-card-img">
+                                <i class="fas fa-sim-card"></i>
+                            </div>
+                            <div class="modal-body-card-title">
+                                <p>Connect<br>SMS GATEWAYS</p>
+                            </div>
+                            <div class="modal-body-card-button">
+                                <button data-bs-toggle="modal" data-bs-target="#smpp-server">Connect</button>
+                            </div>
+                        </div>
+                        <div class="modal-body-cards-card">
+                            <div class="modal-body-card-img">
+                                <i class="fas fa-sim-card"></i>
+                            </div>
+                            <div class="modal-body-card-title">
+                                <p>Connect<br>SMPP Server</p>
+                            </div>
+                            <div class="modal-body-card-button">
+                                <button data-bs-toggle="modal" data-bs-target="#smpp-gateways">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="connect-sim-card" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header--title">
+                        <img src="../Icons/edit-icon.png" alt="logo" width="20%">
+                        <p style="font-weight: 600; font-size: 18px;">Connect SIM Card</p>
+                    </div>
+                    <div class="modal-header--close">
+                        <button type="button" data-bs-dismiss="modal">
+                            <img src="../Icons/close-icon.png" alt="close" width="70%">
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div id="connect-sim-card-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#connect-sim-card-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#connect-sim-card-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#connect-sim-card-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="modal-body-content">
+                                <div class="modal-body-content-info-1">
+                                    <div class="modal-body-content-text">
+                                        <div class="modal-body-content-info">
+                                            <p style="font-weight: 500;">
+                                                1. Download the latest version of Android Version from here. It is better 
+                                                if you download it directly into your phone.
+                                            </p>
+                                            <p style="font-weight: 500;">
+                                                2. Download the latest version of Android Version from here. It is better 
+                                                if you download it directly into your phone.
+                                            </p>
+                                        </div>
+                                        <div class="modal-body-content-img">
+                                            <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0"
+                                                class="qr-code img-thumbnail img-responsive" 
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="modal-body-content-buttons">
+                                        <button type="button" class="btn btn-primary" data-bs-target="#connect-sim-card-carousel" data-bs-slide="next">
+                                            Next
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="modal-body-content">
+                                <div class="modal-body-content-info-1">
+                                    <div class="modal-body-content-text">
+                                        <div class="modal-body-content-info">
+                                            <p style="font-weight: 500;">
+                                                1. Download the latest version of Android Version from here. It is better 
+                                                if you download it directly into your phone.
+                                            </p>
+                                            <p style="font-weight: 500;">
+                                                2. Download the latest version of Android Version from here. It is better 
+                                                if you download it directly into your phone.
+                                            </p>
+                                        </div>
+                                        <div class="modal-body-content-img">
+                                            <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0"
+                                                class="qr-code img-thumbnail img-responsive" 
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="modal-body-content-buttons">
+                                        <button type="button" class="btn btn-primary" data-bs-target="#connect-sim-card-carousel" data-bs-slide="prev">
+                                            Previous
+                                        </button>
+                                        <button type="button" class="btn btn-primary" data-bs-target="#connect-sim-card-carousel" data-bs-slide="next">
+                                            Next
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="modal-body-content">
+                                <div class="modal-body-content-info-1">
+                                    <div class="modal-body-content-text">
+                                        <div class="modal-body-content-info">
+                                            <p style="font-weight: 500;">
+                                                1. Download the latest version of Android Version from here. It is better 
+                                                if you download it directly into your phone.
+                                            </p>
+                                            <p style="font-weight: 500;">
+                                                2. Download the latest version of Android Version from here. It is better 
+                                                if you download it directly into your phone.
+                                            </p>
+                                        </div>
+                                        <div class="modal-body-content-img">
+                                            <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0"
+                                                class="qr-code img-thumbnail img-responsive" 
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="modal-body-content-buttons">
+                                        <button type="button" class="btn btn-primary" data-bs-target="#connect-sim-card-carousel" data-bs-slide="prev">
+                                            Previous
+                                        </button>
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                                            Done
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#connect-sim-card-carousel" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                      </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SMS GATEWAY AND SMPP MODAL END -->
 
     <!-- Modals END -->
     <script>
