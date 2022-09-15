@@ -35,11 +35,15 @@ textarea {
 
 
 .dashboard-navbaar {
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky;
     justify-content: flex-start;
     align-items: center;
     width: 18%;
     row-gap: 25px;
     height: 100vh;
+    overflow: hidden;
 }
 
 .dashboard-navbaar--icon {
@@ -873,165 +877,238 @@ input:checked+.slider:before {
 }
 
 .chatbox-content-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
+    padding: 1%;
+    border-radius: 20px;
     background-color: #e6e6e6;
-    border-radius: 30px;
-    width: 100%;
-    padding: 3% 2% 3% 2%;
-    font-size: 16px;
+
 }
 
 .chatbox-content-body-main {
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
-    font-size: 1.2vw;
-    font-weight: 600;
-    /* border-radius: 30px; */
-    /* background-color: aqua; */
+    column-gap: 2%;
+    height: 75vh;
+    padding: 1%;
 }
 
-.chatbox-content-body-title {
-    padding-bottom: 1%;
-    font-weight: 600;
-}
-
-.chatbox-content-body-main-contacts {
+.chatbox-content-body-main-left {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 2%;
+    width: 35%;
     background-color: white;
-    width: 40%;
-    padding: 2%;
     border-radius: 20px;
+    padding: 1%;
+
 }
 
-.search-bar {
+.chatbox-contacts-search {
     display: flex;
     flex-direction: row;
-    column-gap: 2px;
-    height: max-content;
+    column-gap: 2%;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0px;
+    justify-content: space-between;
+    padding: 2%;
 }
 
-.search-bar input {
-    border: none;
-    font-style: italic;
-    width: 80%;
-}
-
-.contact-names {
+.chatbox-contacts-list {
     display: flex;
     flex-direction: column;
-
-    row-gap: 10px;
-}
-
-.chatbox-content-body-main-chat {
-    background-color: white;
-    border-radius: 20px;
-    padding: 20px;
-}
-
-.chatbox-inbox {
-    padding: 20px;
+    row-gap: 20px;
+    padding: 2%;
 
 }
 
-.card-body {
-    /* background-color: #E6E6E6; */
-    padding-left: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
-.chatbox-contacts {
+.chatbox-contacts-list-name-icon {
     display: flex;
     flex-direction: row;
-    column-gap: 20px;
-    /* background-color: white; */
-    border: none;
-
+    column-gap: 2%;
+    align-items: center;
 }
 
-.chatbox-contacts-right {
-    background-color: white;
+.chatbox-content-body-main-right {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2%;
+    padding: 1%;
     border-radius: 20px;
+    background-color: white;
     width: 65%;
+}
 
+.chatbox-content-body-main-right-head {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2%;
+    align-items: center;
+    font-weight: 600;
+}
+
+.chatbox-content-body-main-right-inbox {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2%;
+    overflow: scroll;
+    padding: 2%;
+    padding-right: 3%;
 }
 
 ::-webkit-scrollbar {
     display: none;
 }
 
-.chatbox-contacts-left {
-    background-color: white;
-    border-radius: 20px;
-    width: 30%;
-}
 
-.chatbox-contacts-list-left {
-    column-gap: 10px;
-}
-
-.chatbox-contacts-list-info {
-    width: 100%;
-}
-
-.chatbox-contacts-left--header {
-    display: flex;
-    flex-direction: column;
-}
-
-.chatbox-contacts-list {
-    padding: 5%;
-}
-
-.chatbox-contacts-search {
+.chatbox-inbox-message-sent {
     display: flex;
     flex-direction: row;
-    column-gap: 10%;
+    column-gap: 2%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.chatbox-inbox-message-sent-text {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 5px;
+
+}
+
+.chatbox-inbox-message-received {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.chatbox-inbox-message-received-text {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.chatbox-content-body-main-right-footer {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1%;
     align-items: center;
+    padding: 1%;
     justify-content: space-between;
-    font-size: 16px;
-    margin-bottom: 10px;
 }
 
-.chatbox-contacts-search input {
+
+
+.chatbox-content-body-main-right-footer input {
+    width: 70%;
     border: none;
-    border-radius: 13px;
-    padding: 2%;
-    width: 100%;
-    font-size: 16px;
+    font-style: italic;
+}
+
+
+
+.chatbox-content-body-main-right-bottom-credits {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: small;
+    opacity: 80%;
+    font-style: italic;
+}
+
+
+
+.dropbtn-down {
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: fit-content;
+    min-height: fit-content;
+    align-items: center;
+    box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: space-evenly;
+    padding: 15px;
+}
+
+
+.dropbtn-up {
+
+    color: black;
+    border: none;
+}
+
+.dropup {
+    /* position: relative; */
+    display: inline-block;
+}
+
+.dropup-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: fit-content;
+    min-height: fit-content;
+    bottom: 25px;
+    right: -65px;
+    z-index: 1;
+    box-shadow: 8px 8px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dropup-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropup-content a:hover {
+    background-color: #ccc
+}
+
+.dropup:hover .dropup-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
 
 }
 
-.chatbox-contacts-search-icons {
-    padding: 3% 5% 3% 5%;
-}
-
-.chatbox-contacts-search-icons i {
-    width: 15%;
-    height: max-content;
-}
-
-.chatbox-contacts-left-img {
-    margin-right: 10%;
-    width: 40%;
-}
-
-.chatbox-contacts-left-img img {
-    width: 100%;
-}
-
-.chatbox-contacts-chat-footer input {
-    font-size: 16px;
+.dropup-content-rows {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
 }
 
 /* CONTACT PAGE */
@@ -1083,7 +1160,7 @@ input:checked+.slider:before {
     padding: 0.5%;
 }
 
-.page-icons-list > img:hover {
+.page-icons-list>img:hover {
     transform: scale(1.1);
     transition: 0.4s;
 }
@@ -1098,13 +1175,10 @@ input:checked+.slider:before {
 }
 
 .contact-page-navbar-page-search {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     width: 40%;
     background-color: white;
-    padding: 0.6%;
+    padding: 1%;
     border-radius: 15px;
     height: max-content;
 }
@@ -1112,19 +1186,11 @@ input:checked+.slider:before {
 .contact-page-navbar-page-search p {
     margin-bottom: 0px;
     width: 35%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* font-size: large; */
 }
 
 .contact-page-navbar-page-search input {
-    border-radius: 15px;
     background-color: #e6e6e6;
-    border: none;
-    padding: 2%;
     width: 50%;
-    font-size: 16px;
 }
 
 .contact-page-mid-div {
@@ -1267,16 +1333,11 @@ input:checked+.slider:before {
 }
 
 .activity-navbar--number {
-    display: flex;
-    flex: row;
-    column-gap: 10px;
     width: 30%;
-    align-items: center;
     justify-content: space-between;
     background-color: #e6e6e6;
     border-radius: 15px;
-    padding: 1%;
-    margin-left: 10px;
+    padding: 10px;
     height: max-content;
 }
 
@@ -1288,10 +1349,6 @@ input:checked+.slider:before {
 
 .activity-navbar--number select {
     width: 60%;
-    border: none;
-    border-radius: 13px;
-    font-size: 16px;
-    padding: 6px;
 }
 
 .activity-navbar--icons {
