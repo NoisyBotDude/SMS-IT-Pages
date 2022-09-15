@@ -148,7 +148,7 @@
                     <button data-bs-toggle="modal" data-bs-target="#myModal1">Create Group</button>
                     <button data-bs-toggle="modal" data-bs-target="#myModal2">Get New Number</button>
                     <button data-bs-toggle="modal" data-bs-target="#myModal3">Import Contacts</button>
-                    <button data-bs-toggle="modal" data-bs-target="#myModal3">SMS Gateway & SMPP</button>
+                    <button data-bs-toggle="modal" data-bs-target="#sms-gateway-and-smpp">SMS Gateway & SMPP</button>
                 </div>
                 <div class="dashboard-content-section-3">
                     <div class="dashboard-content-section-3-navbar">
@@ -360,7 +360,8 @@
                             <div class="number-of-characters-right-top-bottoms">
                                 <button class="variation-btn">Variations</button>
                                 <button class="spin-btn">Spin</button>
-                                <button class="spin-question-button" style="color: black; background-color:white;">
+                                <button data-bs-toggle="modal" data-bs-target="#spin-help" class="spin-question-button"
+                                    style="color: black; background-color:white;">
                                     <i class="fa-solid fa-circle-question" style="font-size: 1.8em;"></i>
                                 </button>
                             </div>
@@ -1796,7 +1797,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="modal-header--title">
-                        <img src="../Icons/edit-icon.png" alt="logo" width="20%">
+                        <img src="../Icons/earth-icon.png" alt="logo" width="10%">
                         <p style="font-weight: 600; font-size: 18px;">SMS Gateway And SMPP</p>
                     </div>
                     <div class="modal-header--close">
@@ -1988,6 +1989,57 @@
         </div>
     </div>
     <!-- SMS GATEWAY AND SMPP MODAL END -->
+
+    <div id="spin-help" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header--title">
+                        <img src="../Icons/question-icon.png" alt="logo" width="20%">
+                        <p style="font-weight: 600; font-size: 18px;">Spin Help</p>
+                    </div>
+                    <div class="modal-header--close">
+                        <button type="button" data-bs-dismiss="modal">
+                            <img src="../Icons/close-icon.png" alt="close" width="70%">
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        You can spin your messages with the use of spintax to create multiple variations of your
+                        messages when sending. Mobile carriers are a little more cautious letting someone send thousands
+                        of identical SMS messages at 1 time for SPAM reasons.<br><br>
+
+                        The ability to automatically create different variations of message text, along with rotating
+                        through different numbers in your account provide an excellent safety measure against potential
+                        issues. To mitigate potential problems, it's best to distribute the load of your SMS traffic, so
+                        that SMS messages are sent from as many different outgoing phone numbers as possible and the
+                        message text is varied for each outgoing SMS.<br><br>
+
+                        Sample Spintax Format: {Hello|Howdy|Hola} to you, {Mr.|Mrs.|Ms.} {Smith|Williams|Davis}<br>
+                        Sample Spintax Output: <strong>Howdy</strong> to you, <strong>Mrs. Davis</strong>!<br>
+                        Sample Spintax Output: <strong>Mr. Smith</strong> to you, <strong>Mr. Smith</strong>!<br><br>
+
+                        The "Variations" button will tell you how many different variations of the message your spintax
+                        will generate when sending.<br><br>
+
+                        The "Spin {|}" button will let you see the output in the phone preview window each time the
+                        button is clicked. When you send your Bulk SMS, the system will automatically generate the
+                        different variations for each SMS.<br><br>
+
+                        <strong>IMPORTANT NOTE:</strong> Make sure each of your variations make perfect sense as you wouldn't want to be
+                        sending your subscribers gibberish. This is a definite way to lose them. You want your messages
+                        to be accepted with a degree of credibility.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modals END -->
     <script>
