@@ -923,8 +923,10 @@ input:checked+.slider:before {
 .chatbox-contacts-list-name-icon {
     display: flex;
     flex-direction: row;
-    column-gap: 2%;
+    column-gap: 20px;
     align-items: center;
+    border: none;
+    background-color: white;
 }
 
 .chatbox-content-body-main-right {
@@ -1079,11 +1081,13 @@ input:checked+.slider:before {
     position: absolute;
     background-color: white;
     min-width: fit-content;
-    min-height: fit-content;
+    /* min-height: fit-content; */
     bottom: 25px;
-    right: -65px;
+    right: -140px;
+    left: -70px;
     z-index: 1;
     box-shadow: 8px 8px 8px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px;
 }
 
 .dropup-content a {
@@ -1103,13 +1107,16 @@ input:checked+.slider:before {
     row-gap: 10px;
     padding: 15px;
     border-radius: 10px;
+    min-width: fit-content;
 
 }
 
 .dropup-content-rows {
     display: flex;
     flex-direction: row;
-    column-gap: 10px;
+    column-gap: 5px;
+    /* min-width: fit-content; */
+
 }
 
 /* CONTACT PAGE */
