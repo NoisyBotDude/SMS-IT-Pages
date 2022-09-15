@@ -69,89 +69,83 @@
         <div class="dashboard-content flex-column justify-content-center align-items-center">
             <div class="dashboard-content--dashboard dashboard-content-info">
                 <div class="dashboard-content--cards">
-                    <div class="dashboard-content--cards--rows--1">
-                        <div class="dashboard-card">
-                            <div class="dashboard-card--info">
-                                <img src="../Icons/send-icon.png" />
-                                <div class="dashboard-card--info--amount">
-                                    <p>Received</p>
-                                    <p style="color:#508AFF; font-weight: 700;">100000</p>
-                                </div>
-                            </div>
-                            <div class="dashboard-card--graph">
-                                <canvas id="myChart1" width="100%" height="25%"></canvas>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card--info">
+                            <img src="../Icons/send-icon.png" />
+                            <div class="dashboard-card--info--amount">
+                                <p>Received</p>
+                                <p style="color:#508AFF; font-weight: 700;">100000</p>
                             </div>
                         </div>
-                        <div class="dashboard-card">
-                            <div class="dashboard-card--info">
-                                <img src="../img/received.png" width="20%" height="20%" />
-                                <div class="dashboard-card--info--amount">
-                                    <p>Received</p>
-                                    <p style="color:green; font-weight: 700;">100000</p>
-                                </div>
-                            </div>
-                            <div class="dashboard-card--graph">
-                                <canvas id="myChart2" width="100%" height="25%"></canvas>
-                            </div>
-                        </div>
-                        <div class="dashboard-card">
-                            <div class="dashboard-card--info">
-                                <img src="../img/delievered.png" width="20%" height="20%" />
-                                <div class="dashboard-card--info--amount">
-                                    <p>Delivered</p>
-                                    <p style="color:green; font-weight: 700;">100000</p>
-                                </div>
-                            </div>
-                            <div class="dashboard-card--graph">
-                                <canvas id="myChart3" width="100%" height="25%"></canvas>
-                            </div>
+                        <div class="dashboard-card--graph">
+                            <canvas id="myChart1" width="100%" height="25%"></canvas>
                         </div>
                     </div>
-                    <div class="dashboard-content--cards--rows--1">
-                        <div class="dashboard-card">
-                            <div class="dashboard-card--info">
-                                <img src="../img/failed.png" width="20%" height="20%" />
-                                <div class="dashboard-card--info--amount">
-                                    <p>Failed</p>
-                                    <p style="color:red; font-weight: 700;">100000</p>
-                                </div>
-                            </div>
-                            <div class="dashboard-card--graph">
-                                <canvas id="myChart4" width="100%" height="25%"></canvas>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card--info">
+                            <img src="../img/received.png" width="20%" height="20%" />
+                            <div class="dashboard-card--info--amount">
+                                <p>Received</p>
+                                <p style="color:green; font-weight: 700;">100000</p>
                             </div>
                         </div>
-                        <div class="dashboard-card">
-                            <div class="dashboard-card--info">
-                                <img src="../img/queued.png" width="20%" height="20%" />
-                                <div class="dashboard-card--info--amount">
-                                    <p>Queued</p>
-                                    <p style="color: #F2C60F; font-weight: 700;">100000</p>
-                                </div>
-                            </div>
-                            <div class="dashboard-card--graph">
-                                <canvas id="myChart5" width="100%" height="25%"></canvas>
+                        <div class="dashboard-card--graph">
+                            <canvas id="myChart2" width="100%" height="25%"></canvas>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card--info">
+                            <img src="../img/delievered.png" width="20%" height="20%" />
+                            <div class="dashboard-card--info--amount">
+                                <p>Delivered</p>
+                                <p style="color:green; font-weight: 700;">100000</p>
                             </div>
                         </div>
-                        <div class="dashboard-card">
-                            <div class="dashboard-card--info">
-                                <img src="../img/read.png" width="20%" height="20%" />
-                                <div class="dashboard-card--info--amount">
-                                    <p>Read</p>
-                                    <p style="color:#29ABE2; font-weight: 700;">100000</p>
-                                </div>
+                        <div class="dashboard-card--graph">
+                            <canvas id="myChart3" width="100%" height="25%"></canvas>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card--info">
+                            <img src="../img/failed.png" width="20%" height="20%" />
+                            <div class="dashboard-card--info--amount">
+                                <p>Failed</p>
+                                <p style="color:red; font-weight: 700;">100000</p>
                             </div>
-                            <div class="dashboard-card--graph">
-                                <canvas id="myChart6" width="100%" height="25%"></canvas>
+                        </div>
+                        <div class="dashboard-card--graph">
+                            <canvas id="myChart4" width="100%" height="25%"></canvas>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card--info">
+                            <img src="../img/queued.png" width="20%" height="20%" />
+                            <div class="dashboard-card--info--amount">
+                                <p>Queued</p>
+                                <p style="color: #F2C60F; font-weight: 700;">100000</p>
                             </div>
+                        </div>
+                        <div class="dashboard-card--graph">
+                            <canvas id="myChart5" width="100%" height="25%"></canvas>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card--info">
+                            <img src="../img/read.png" width="20%" height="20%" />
+                            <div class="dashboard-card--info--amount">
+                                <p>Read</p>
+                                <p style="color:#29ABE2; font-weight: 700;">100000</p>
+                            </div>
+                        </div>
+                        <div class="dashboard-card--graph">
+                            <canvas id="myChart6" width="100%" height="25%"></canvas>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="dashboard-content-start-campaign dashboard-content-info hide">
                 <div class="dashboard-content-section-2">
-                    <button data-bs-toggle="modal" data-bs-target="#myModal1">
-                        <p>Create Group</p>
-                    </button>
+                    <button data-bs-toggle="modal" data-bs-target="#myModal1">Create Group</button>
                     <button data-bs-toggle="modal" data-bs-target="#myModal2">Get New Number</button>
                     <button data-bs-toggle="modal" data-bs-target="#myModal3">Import Contacts</button>
                     <button data-bs-toggle="modal" data-bs-target="#myModal3">SMS Gateway & SMPP</button>
@@ -231,32 +225,32 @@
                                 <div class="message-groups--filter--title">
                                     <h3>Location Filters</h3>
                                 </div>
-                                <div class="message-groups--filter--city">
+                                <div class="flex-column">
                                     <p style="font-weight: 600;">City</p>
                                     <input type="text" placeholder="Enter City" class="input-border-radius" />
                                 </div>
-                                <div class="message-groups--filter--state">
+                                <div class="flex-column">
                                     <p style="font-weight: 600;">State</p>
                                     <input type="text" placeholder="Enter State" class="input-border-radius" />
                                 </div>
-                                <div class="message-groups--filter--postal">
+                                <div class="flex-column">
                                     <p style="font-weight: 600;">Postal Code</p>
                                     <input type="text" placeholder="Enter Postal Code" class="input-border-radius" />
                                 </div>
-                                <div class="message-groups--filter--delivery">
+                                <div class="flex-column">
                                     <p style="font-weight: 600;">Schedule Delivery</p>
                                     <input type="datetime-local" placeholder="Enter A Date"
                                         class="input-border-radius" />
                                 </div>
                             </div>
                             <div class="message-contacts hide" id="message-contacts">
-                                <div class="message-contacts--number">
+                                <div class="flex-column">
                                     <p>Name | Group Name | Phone Number</p>
                                     <select class="input-border-radius">
                                         <option>123456789</option>
                                     </select>
                                 </div>
-                                <div class="message-contacts--delivery">
+                                <div class="flex-column">
                                     <p>Schedule Delivery</p>
                                     <input type="datetime-local" placeholder="Enter A Date" class="input-border-radius">
                                 </div>
@@ -268,14 +262,14 @@
                                         placeholder="Please use country code with number"></textarea>
                                 </div>
                             </div>
-                            <div class="message-template">
+                            <div class="message-select">
                                 <p>Message Template</p>
                                 <select>
                                     <option>123456789</option>
                                 </select>
 
                             </div>
-                            <div class="mobile-splash-template">
+                            <div class="message-select">
                                 <p>Mobile Splash Page</p>
                                 <select>
                                     <option>123456789</option>
@@ -825,42 +819,34 @@
                     <div class="contact-page-mid-div">
                         <p style="font-size:1.4vw; font-weight:600">Contact Search</p>
                         <div class="contact-search-with-border">
-                            <div class="contact-search-with-border-left">
-                                <p>Field you want to search on</p>
-                                <select>
+                            <div class="dashboard-filter contact-filter">
+                                <label for="contact-field-search-on">Field you want to search on</label>
+                                <select id="contact-field-search-on">
                                     <option>Number</option>
                                 </select>
                             </div>
-                            <div class="contact-search-with-border-right">
-                                <p>Search on value</p>
-                                <input type="text">
+                            <div class="dashboard-filter contact-filter">
+                                <label for="search-on-value">Search on value</label>
+                                <input type="text" id="search-on-value">
                             </div>
                         </div>
                         <div class="contact-search-no-border">
-                            <div class="contact-search-no-border-left">
-                                <p style="font-weight: 600;">Filters:</p>
-                                <div class="contact-search-no-border-left-groups">
-                                    <p>Groups</p>
-                                    <select>
-                                        <option>
-                                            Hellooo
-                                        </option>
-                                    </select>
-                                </div>
+                            <p style="font-weight: 600;">Filters:</p>
+                            <div class="dashboard-filter contact-filter">
+                                <label for="contact-field-groups">Groups</label>
+                                <select id="contact-filter-groups">
+                                    <option>Hellooo</option>
+                                </select>
                             </div>
-                            <div class="contact-search-no-border-right">
-                                <div class="contact-search-no-border-right-source">
-                                    <p>Source</p>
-                                    <select>
-                                        <option>
-                                            Hellooo
-                                        </option>
-                                    </select>
-                                </div>
-                                <button class="contact-search-no-border-right-reset">
-                                    Reset Filters
-                                </button>
+                            <div class="dashboard-filter contact-filter">
+                                <label for="contact-filter-source">Source</label>
+                                <select id="contact-filter-source">
+                                    <option>Hellooo</option>
+                                </select>
                             </div>
+                            <button class="contact-search-no-border-right-reset">
+                                Reset Filters
+                            </button>
                         </div>
                         <div class="contact-page-mid-div-search-button">
                             <button style="background-color: #22b573;border:none;">Search</button>
@@ -963,8 +949,8 @@
                             <div class="activity-search--header">
                                 <p style="font-weight: 600;">Search Messages</p>
                             </div>
-                            <div class="activity-search--input">
-                                <div class="activity-search--input--field">
+                            <div class="activity-search--filter">
+                                <div class="dashboard-filter activity-filter">
                                     <img src="../Icons/New folder (4)/activityicons-60.png" width="7%" height="7%" />
                                     <label for="device">Select Device</label>
                                     <select name="device" id="device">
@@ -974,12 +960,12 @@
                                         <option value="3">Device 3</option>
                                     </select>
                                 </div>
-                                <div class="activity-search--input--field">
+                                <div class="dashboard-filter activity-filter">
                                     <img src="../Icons/New folder (4)/activityicons-62.png" width="7%" height="7%" />
                                     <label for="phone">Mobile Number</label>
                                     <input type="tel" name="phone" id="phone" />
                                 </div>
-                                <div class="activity-search--input--field">
+                                <div class="dashboard-filter activity-filter">
                                     <img src="../Icons/New folder (4)/activityicons-64.png" width="7%" height="7%" />
                                     <label for="status">Status</label>
                                     <select name="status" id="status">
@@ -989,17 +975,17 @@
                                         <option value="3">Device 3</option>
                                     </select>
                                 </div>
-                                <div class="activity-search--input--field">
+                                <div class="dashboard-filter activity-filter">
                                     <img src="../Icons/New folder (4)/activityicons-61.png" width="7%" height="7%" />
                                     <label for="message0">Message</label>
                                     <input type="text" name="message" id="message" />
                                 </div>
-                                <div class="activity-search--input--field">
+                                <div class="dashboard-filter activity-filter">
                                     <img src="../Icons/New folder (4)/activityicons-63.png" width="7%" height="7%" />
                                     <label for="start-date">Start Date</label>
                                     <input type="date" name="start-date" id="start-date" />
                                 </div>
-                                <div class="activity-search--input--field">
+                                <div class="dashboard-filter activity-filter">
                                     <img src="../Icons/New folder (4)/activityicons-63.png" width="7%" height="7%" />
                                     <label for="end-date">End Date</Em></label>
                                     <input type="date" name="end-date" id="end-date" />
@@ -1021,7 +1007,7 @@
                             </div>
                         </div>
 
-                        <div class="activity-page-last-div">
+                        <div class="activity-page-last-div table-responsive">
                             <table class="table table-borderless">
                                 <thead>
                                     <tr class="text-center">
