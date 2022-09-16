@@ -785,6 +785,22 @@ input:checked+.slider:before {
     background-color: #e6e6e6;
 }
 
+.page-icons-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e6e6e6;
+    border-radius: 15px;
+    height: max-content;
+    padding: 5px;
+}
+
+.page-icons-list>img:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
 /* Chatbox css */
 
 .dashboard-content--chatbox {
@@ -828,13 +844,14 @@ input:checked+.slider:before {
     align-items: center;
     justify-content: center;
     font-size: 16px;
+    width: 100%;
 }
 
 .chatbox-content--navbar--number {
     display: flex;
     flex: row;
     column-gap: 10px;
-    width: 65%;
+    width: 30%;
     align-items: center;
     justify-content: space-between;
     background-color: #e6e6e6;
@@ -858,24 +875,12 @@ input:checked+.slider:before {
 }
 
 .chatbox-content--navbar--icons {
-    display: flex;
-    flex: row;
-    column-gap: 10px;
-    background-color: #E6E6E6;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4px;
-    border-radius: 15px;
-    height: max-content;
-    width: auto;
-    margin-right: 9px;
-
-
+    width: 70%;
 }
 
-.chatbox-content--navbar--icons img:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
+.chatbox-content--navbar--icons img {
+    width: 45px;
+    height: max-content;
 }
 
 .chatbox-content-body {
@@ -1156,22 +1161,6 @@ input:checked+.slider:before {
 
 .contact-page-navbar p {
     font-size: 16px;
-}
-
-.page-icons-list {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #e6e6e6;
-    border-radius: 15px;
-    height: max-content;
-    padding: 5px;
-}
-
-.page-icons-list>img:hover {
-    transform: scale(1.1);
-    transition: 0.4s;
 }
 
 .contact-page-navbar-icons {
