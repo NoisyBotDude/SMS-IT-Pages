@@ -793,7 +793,7 @@ input:checked+.slider:before {
     background-color: #e6e6e6;
     border-radius: 15px;
     height: max-content;
-    padding: 5px;
+    padding: 10px;
 }
 
 .page-icons-list>img:hover {
@@ -848,30 +848,17 @@ input:checked+.slider:before {
 }
 
 .chatbox-content--navbar--number {
-    display: flex;
-    flex: row;
     column-gap: 10px;
     width: 30%;
-    align-items: center;
     justify-content: space-between;
     background-color: #e6e6e6;
     border-radius: 15px;
     padding: 8px;
-    margin-left: 10px;
-
 }
 
-.chatbox-content--navbar--number p {
-    margin: 0px;
-    padding-left: 8px;
-}
-
-.chatbox-content--navbar--number input {
+.chatbox-content--navbar--number input[type="tel"] {
     width: 40%;
-    border: none;
-    border-radius: 13px;
-    padding: 6px;
-
+    background-color: white;
 }
 
 .chatbox-content--navbar--icons {
@@ -1202,46 +1189,32 @@ input:checked+.slider:before {
 
 }
 
-.contact-filter {
-    width: 45%;
-    column-gap: 5px;
+.contact-search--filter {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    /* column-gap: 15px; */
+    row-gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.contact-filter {
+    align-items: flex-start;
+    width: 50%;
+    column-gap: 5px;
+    row-gap: 5px;
+    flex-direction: column;
 }
 
 .contact-filter input,
 .contact-filter select {
-    width: 40%;
+    width: 80%;
 }
 
 .contact-filter label {
     width: 50%
-}
-
-.contact-search-with-border {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    column-gap: 20px;
-    border: 1px solid grey;
-    border-radius: 15px;
-    padding: 10px;
-    width: 100%;
-    height: max-content;
-}
-
-.contact-search-no-border {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    column-gap: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 100%;
-}
-
-.contact-search-no-border p {
-    width: 15%;
 }
 
 .contact-search-no-border-right-reset {
