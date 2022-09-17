@@ -108,6 +108,17 @@ textarea {
     row-gap: 50px;
 }
 
+.dashboard-content--navbaar {
+    display: flex;
+    flex: row;
+    column-gap: 20px;
+    height: max-content;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    width: 100%;
+}
+
 .dashboard-content--dashboard {
     display: flex;
     flex-direction: column;
@@ -836,17 +847,6 @@ input:checked+.slider:before {
     padding: 40px 20px 20px 20px;
 }
 
-.chatbox-content--navbar {
-    display: flex;
-    flex: row;
-    column-gap: 20px;
-    height: 40px;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    width: 100%;
-}
-
 .chatbox-content--navbar--number {
     column-gap: 10px;
     width: 30%;
@@ -1119,7 +1119,7 @@ input:checked+.slider:before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    width: 90%;
     height: max-content;
     background-color: #f2f2f2;
     border-radius: 20px;
@@ -1139,23 +1139,12 @@ input:checked+.slider:before {
     margin: 0px;
 }
 
-.contact-page-navbar {
-    display: flex;
-    flex-direction: row;
-    column-gap: 60px;
-
-}
-
-.contact-page-navbar p {
-    font-size: 16px;
-}
-
 .contact-page-navbar-icons {
     width: 60%;
 }
 
 .contact-page-navbar-icons img {
-    width: 7.5%;
+    width: 40px;
     height: max-content;
 }
 
@@ -1257,6 +1246,10 @@ input:checked+.slider:before {
     width: 25%;
 }
 
+.table-actions img {
+    width: 26px;
+}
+
 .table-actions img:hover {
     transform: scale(1.1);
     transition: 0.5s;
@@ -1275,7 +1268,7 @@ input:checked+.slider:before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    width: 90%;
     height: max-content;
     background-color: #f2f2f2;
     border-radius: 20px;
@@ -1288,19 +1281,10 @@ input:checked+.slider:before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     row-gap: 40px;
     background-color: #f2f2f2;
     font-family: "Poppins", sans-serif;
-}
-
-.activity-navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    column-gap: 15px;
-    width: 90%;
 }
 
 .activity-navbar--number {
@@ -1335,7 +1319,7 @@ input:checked+.slider:before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    width: 100%;
     row-gap: 40px;
 }
 
