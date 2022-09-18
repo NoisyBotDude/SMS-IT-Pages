@@ -744,3 +744,98 @@ margin: 10px;
 }
 
 /* CONNECT SIM CARD END */
+
+/* MESSAGES SEND MAIL */
+
+.modal-body--input--mail p {
+    text-align: left;
+    width: 10%;
+}
+
+.modal-body--input--mail  input {
+    width: 90%;
+}
+
+.modal-body--input--mail--to {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    column-gap: 10px;
+    background-color: #E9E9E9;
+    border-radius: 10px;
+}
+
+.modal-body--input--mail--to button {
+    border: none;
+    background-color: transparent;
+}
+
+.schedule-message-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+    background-color: #198754;
+    border-radius: 5px;
+}
+
+.schedule-message-button > i {
+    color: white;
+    width: 30%;
+    border-left: 2px solid white;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* MESSAGES SEND MAIL END */
+
+/* SCHEDULED MAILS */
+
+.modal-body-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    row-gap: 30px;
+}
+
+.modal-body-content-contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal-body-contact-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.modal-body-contact-info img {
+    width: 30px;
+}
+
+.modal-body-contact-date-time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.fa-trash {
+    color: red;
+}
+
+.fa-clock {
+    color: rgb(237, 237, 12);
+}
+
+/* SCHEDULED MAILS END */
