@@ -64,6 +64,10 @@
                     <img src="../img/asdad/icons2-20.png" />
                     <p>Contacts</p>
                 </button>
+                <button class="dashboard-navbaar--links--button" id="dashboard-content-fax">
+                    <img src="../img/asdad/icons2-20.png" />
+                    <p>Fax</p>
+                </button>
             </div>
         </div>
         <div class="dashboard-content flex-column justify-content-center align-items-center">
@@ -618,13 +622,12 @@
                                         <option>Group 3</option>
                                         <option>Group 4</option>
                                         <option>Group 5</option>
-        
+
                                     </select>
                                 </div>
                                 <div class="chatbox-contacts-list">
                                     <button class="chatbox-contacts-list-name-icon">
-                                        <img src="../img/asdad/icons2-16.png" width="12%"
-                                            title="Delete Contact" />
+                                        <img src="../img/asdad/icons2-16.png" width="12%" title="Delete Contact" />
                                         <div class="chatbox-contacts-list-name-email">
                                             <p>Ashish Sarmah</p>
                                             <p style="opacity: 0.7; font-size:small">ashishsarmah@gmail.com</p>
@@ -681,7 +684,8 @@
                                         sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt ut labore et dolore magna aliqua.Lorem
                                         ipsum dolo sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua.sit amet, consectetur adipiscing elit, sed
+                                        incididunt ut labore et dolore magna aliqua.sit amet, consectetur adipiscing
+                                        elit, sed
                                         do eiusmod tempor
                                         incididunt ut labore et dolore magna aliqua.
                                         <br>Regards
@@ -967,6 +971,50 @@
                             </table>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="dashboard-content-fax dashboard-content-info hide">
+                <div class="fax-page">
+                    <p style="font-weight: 600; font-size: medium;">Send Fax</p>
+                    <div class="fax-input dashboard-filter">
+                        <label for="fax-send-from">Send From</label>
+                        <select id="fax-send-from">
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                        </select>
+                    </div>
+                    <div class="fax-input dashboard-filter">
+                        <label for="fax-send-to">Send To</label>
+                        <input type="text" id="fax-send-to" name="points">
+                    </div>
+                    <div class="fax-input dashboard-filter">
+                        <label for="fax-quality">Quality</label>
+                        <select id="fax-quality">
+                            <option>1</option>
+                            <option>1</option>
+                            <option>1</option>
+                        </select>
+                    </div>
+                    <div>
+                        <p style="opacity: 0.7;padding-bottom:5px">PDF Files Only</p>
+                        <div class="pick-file-fax">
+                            <input type="file" name="uploadfile" id="img"
+                                style="display:none; width: fit-content;"></input>
+                            <label class="pick-file-image" for="img">Pick File
+                                <img src="../img/New folder (3)/icons-11.png" width="15px" />
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="fax-credits-note">
+                        <p>Credits: 1 credit will be deducted for each page faxed + 1 credit per minute for fax
+                            duration Example: If
+                            you are faxing 5 pages, and it takes 1 minute and 45 seconds, 7 credits will be deducted
+                        </p>
+                    </div>
+                    <button class="btn btn-success" style="width: 12%; padding:4px ;">Send</button>
                 </div>
             </div>
         </div>
@@ -2283,7 +2331,7 @@
 
         </div>
     </div>
-    
+
     <div id="scheduled-mails" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg">
 
@@ -2388,7 +2436,7 @@
             .create(document.querySelector('#message-send-mail'))
             .catch(error => {
                 console.error(error);
-        });
+            });
         ClassicEditor
             .create(document.querySelector('#message-content-body-main-right-input'))
             .catch(error => {

@@ -1466,7 +1466,7 @@ input:checked+.slider:before {
     width: 15%;
     border: none;
     border-radius: 10px;
-    padding:8px;
+    padding: 8px;
     background-color: #22B573;
     color: #fff;
     font-size: 16px;
@@ -1532,6 +1532,82 @@ input:checked+.slider:before {
 }
 
 /* DROPDOWN QUESTION MARK ICON END */
+
+/* FAX PAGE */
+
+.dashboard-content-fax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: max-content;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.fax-page {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 90%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.fax-input {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+
+.fax-pickfile {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.fax-input select,
+.fax-input input {
+    width: 50%;
+}
+
+.pick-file-fax {
+    background-color: black;
+    color: white;
+    display: inline-block;
+    width: 12%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+    border-radius: 8px;
+    height: max-content;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.pick-file-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fax-credits-note {
+    align-items: center;
+    font-size: small;
+    padding: 8px;
+    background-color: rgba(249, 160, 160, 0.8);
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+
+/* FAX PAGE END */
 
 .hide {
     display: none;
