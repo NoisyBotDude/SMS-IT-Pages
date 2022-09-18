@@ -1,0 +1,173 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Pinyon+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <!-- CSS
+================================================== -->
+    <!-- Used Bootstrap Version 5.2.0 in this file for better performanance.
+    In other files wherever not mentioned, the version used is 4.0.0     -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- <link rel="stylesheet" href="../css/font-awesome.min.css" /> -->
+    <link rel="stylesheet" href="../css/jquery.webui-popover.css" />
+    <link rel="stylesheet" href="../css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="../css/dashboard.css" />
+    <link rel="stylesheet" href="../css/modals.css" />
+    <link rel="stylesheet" href="../css/email.css" />
+
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+        integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
+    <script src="https://kit.fontawesome.com/6c0f35acb6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="dashboard-content--email dashboard-content-info ">
+        <div class="email-content">
+            <div class="dashboard-content--navbaar">
+                <div class="email-content--navbar--number dashboard-filter">
+                    <p style="font-weight: 400;">Sender Mail</p>
+                    <input type="email" value="johndoe@gmail.com" />
+                </div>
+                <div class="email-content--navbar--icons page-icons-list">
+                    <img src="../img/asdad/icons2-14.png" title="Phonebook" data-bs-toggle="modal"
+                        data-bs-target="#open-note-more" />
+                    <img src="../img/asdad/icons2-15.png" title="Edit Contact" />
+                    <img src="../img/asdad/icons2-16.png" title="Delete Contact" />
+                    <img src="../img/asdad/icons2-18.png" title="Download Chat" />
+                    <img src="../img/asdad/icons2-17.png" title="Delete Chat" />
+                    <img src="../img/asdad/icons2-19.png" title="Schedule Message" />
+                </div>
+            </div>
+            <div class="email-content-body">
+                <p style="padding: 1.5%; font-size:large ;font-weight: 600;">Send Email</p>
+                <div class="email-content-body-main">
+                    <div class="email-content-body-main-left">
+                        <div class="email-contacts-search">
+                            <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+                                aria-describedby="search-addon" style="font-style: italic; border:none;" />
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-rotate-right"></i>
+                            <select>
+                                <option>Group 1</option>
+                                <option>Group 2</option>
+                                <option>Group 3</option>
+                                <option>Group 4</option>
+                                <option>Group 5</option>
+
+                            </select>
+                        </div>
+                        <div class="email-contacts-list">
+                            <button class="email-contacts-list-name-icon">
+                                <img src="../img/asdad/icons2-16.png" width="12%" height="100%"
+                                    title="Delete Contact" />
+                                <div class="email-contacts-list-name-email">
+                                    <p>John Doe</p>
+                                    <p style="opacity: 0.7; font-size:small">johndoe@gmail.com</p>
+                                </div>
+
+                            </button>
+                            <button class="email-contacts-list-name-icon">
+                                <img src="../img/asdad/icons2-16.png" width="12%" height="100%"
+                                    title="Delete Contact" />
+                                <div class="email-contacts-list-name-email">
+                                    <p>Ashish Sarmah</p>
+                                    <p style="opacity: 0.7; font-size:small">ashishsarmah@gmail.com</p>
+                                </div>
+
+                            </button>
+                            <button class="email-contacts-list-name-icon">
+                                <img src="../img/asdad/icons2-16.png" width="12%" height="100%"
+                                    title="Delete Contact" />
+                                <div class="email-contacts-list-name-email">
+                                    <p>Henry</p>
+                                    <p style="opacity: 0.7; font-size:small">henry@gmail.com</p>
+                                </div>
+
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="email-content-body-main-right">
+                        <div class="email-content-body-main-right-head">
+                            <div class="email-content-body-main-right-head-left">
+                                <img src="../img/asdad/icons2-16.png" width="30px" height="100%" />
+                                <p style="font-weight: 600;">John Doe</p>
+                                <p style="opacity: 0.6;">Lorem ipsum dolor sit amet, consectetur </p>
+                            </div>
+                            <div class="email-content-body-main-right-head-time">
+                                <p style="opacity: 0.6;">14.04.2020 09.25</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <hr>
+                        <div class="email-content-body-main-right-head">
+                            <div class="email-content-body-main-right-head-left">
+                                <img src="../img/asdad/icons2-16.png" width="30px" height="100%" />
+                                <p style="font-weight: 600;">John Doe</p>
+                            </div>
+                            <div class="email-content-body-main-right-head-time">
+                                <p style="opacity: 0.6;">14.04.2020 09.25</p>
+                            </div>
+                        </div>
+                        <div class="email-content-body-main-right-text">
+                            <p> Hey
+                                <br><br>Lorem
+                                ipsum dolor
+                                sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.Lorem
+                                ipsum dolor <br>
+                                sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.Lorem
+                                ipsum dolo sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.sit amet, consectetur adipiscing elit, sed
+                                do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                                <br>Regards
+                                <br>Jon
+                            </p>
+                        </div>
+                        <div id="email-content-body-main-right-input">
+                            <p>Write Your Message Here</p>
+                        </div>
+                        <div class="email-content-body-main-right-footer-send-btn">
+                            <i class="fa-solid fa-trash fa-xl"></i>
+                            <button>Send | <i class="fa-regular fa-calendar"></i></button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#email-content-body-main-right-input'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+</body>
+
+</html>
