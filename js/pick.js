@@ -34,3 +34,10 @@ function senderId() {
         $('.sender-id-input').addClass('hide');
     }
 }
+
+var numberPoolCheckbox = document.getElementById("number-pool-checkbox");
+var numberPoolContents = document.getElementById("number-pool-contents");
+
+numberPoolCheckbox.addEventListener("click", function() {
+    numberPoolContents.classList.toggle("hide");
+})

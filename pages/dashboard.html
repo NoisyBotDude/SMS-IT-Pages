@@ -305,7 +305,7 @@
                             <div class="number-pool">
                                 <p>Number Pool</p>
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" id="number-pool-checkbox">
                                     <span class="slider round" style="background-color: #ccc; color: #22B573;"></span>
                                 </label>
                                 <div class="dropdown">
@@ -318,8 +318,23 @@
                                             character segment.
                                         </p>
                                     </div>
-
-
+                                </div>
+                            </div>
+                            <div class="number-pool-contents hide" id="number-pool-contents">
+                                <div class="number-pool-contents-checkbox-name">
+                                    <input type="checkbox">
+                                    <p>Sticky Sender</p>
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                </div>
+                                <div class="number-pool-contents-checkbox-name">
+                                    <input type="checkbox">
+                                    <p>Geo-Match</p>
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
+                                </div>
+                                <div class="number-pool-contents-checkbox-name">
+                                    <input type="checkbox">
+                                    <p>Toll-Free Only</p>
+                                    <i class="fa-solid fa-circle-question" style="font-size: 1.4em;"></i>
                                 </div>
                             </div>
                         </div>
@@ -371,13 +386,13 @@
                 </div>
             </div>
             <div class="dashboard-content--chatbox dashboard-content-info hide">
-                <div class="chatbox-content">
+                <div class="message-content">
                     <div class="dashboard-content--navbaar">
-                        <div class="chatbox-content--navbar--number dashboard-filter">
+                        <div class="message-content--navbar--number dashboard-filter">
                             <p>Send Number</p>
                             <input type="tel" value="987654321" />
                         </div>
-                        <div class="chatbox-content--navbar--icons page-icons-list">
+                        <div class="message-content--navbar--icons page-icons-list">
                             <img src="../img/asdad/icons2-14.png" title="Phonebook" data-bs-toggle="modal"
                                 data-bs-target="#open-note-more" />
                             <img src="../img/asdad/icons2-15.png" title="Edit Contact" />
@@ -387,10 +402,10 @@
                             <img src="../img/asdad/icons2-19.png" title="Schedule Message" />
                         </div>
                     </div>
-                    <div class="chatbox-content-body">
+                    <div class="message-content-body">
                         <p style="padding: 1.5%; font-size:large">SMS Chat</p>
-                        <div class="chatbox-content-body-main">
-                            <div class="chatbox-content-body-main-left">
+                        <div class="message-content-body-main">
+                            <div class="message-content-body-main-left">
                                 <div class="chatbox-contacts-search">
                                     <input type="search" class="form-control rounded" placeholder="Search"
                                         aria-label="Search" aria-describedby="search-addon"
@@ -417,13 +432,13 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="chatbox-content-body-main-right">
-                                <div class="chatbox-content-body-main-right-head">
-                                    <img src="../img/asdad/icons2-16.png" width="3%" height="100%"
+                            <div class="message-content-body-main-right">
+                                <div class="message-content-body-main-right-head">
+                                    <img src="../img/asdad/icons2-16.png" width="30px" height="100%"
                                         title="Delete Contact" />
                                     <p>Nirupam Boss</p>
                                 </div>
-                                <div class="chatbox-content-body-main-right-inbox">
+                                <div class="message-content-body-main-right-inbox">
                                     <div class="chatbox-inbox-message-sent">
                                         <div class="emptyDiv" style="width: 30%;"></div>
                                         <div class="chatbox-inbox-message-sent-text">
@@ -509,7 +524,7 @@
                                     </div>
 
                                 </div>
-                                <div class="chatbox-content-body-main-right-footer">
+                                <div class="message-content-body-main-right-footer">
                                     <i class="fa-solid fa-microphone"></i>
                                     <input type="text" class="form-control rounded" placeholder="Type Message"
                                         aria-label="Search" aria-describedby="search-addon"
@@ -560,7 +575,7 @@
 
                                     <i class="fa-regular fa-paper-plane"></i>
                                 </div>
-                                <div class="chatbox-content-body-main-right-bottom-credits">
+                                <div class="message-content-body-main-right-bottom-credits">
                                     <p>Characters:0</p>
                                     <p>Credits:0</p>
 
@@ -568,6 +583,124 @@
 
                             </div>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="message-content hide">
+                    <div class="dashboard-content--navbaar">
+                        <div class="message-content--navbar--number dashboard-filter">
+                            <p>Sender Mail</p>
+                            <input type="email" value="johndoe@gmail.com" />
+                        </div>
+                        <div class="message-content--navbar--icons page-icons-list">
+                            <img src="../img/asdad/icons2-14.png" title="Phonebook" data-bs-toggle="modal"
+                                data-bs-target="#open-note-more" />
+                            <img src="../img/asdad/icons2-15.png" title="Edit Contact" />
+                            <img src="../img/asdad/icons2-16.png" title="Delete Contact" />
+                            <img src="../img/asdad/icons2-18.png" title="Download Chat" />
+                            <img src="../img/asdad/icons2-17.png" title="Delete Chat" />
+                            <img src="../img/asdad/icons2-19.png" title="Schedule Message" />
+                        </div>
+                    </div>
+                    <div class="message-content-body">
+                        <p style="padding: 1.5%; font-size:large">Send Email</p>
+                        <div class="message-content-body-main send-email-body-main">
+                            <div class="message-content-body-main-left">
+                                <div class="chatbox-contacts-search">
+                                    <input type="search" class="form-control rounded" placeholder="Search"
+                                        aria-label="Search" aria-describedby="search-addon"
+                                        style="font-style: italic; border:none;" />
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                    <select>
+                                        <option>Group 1</option>
+                                        <option>Group 2</option>
+                                        <option>Group 3</option>
+                                        <option>Group 4</option>
+                                        <option>Group 5</option>
+        
+                                    </select>
+                                </div>
+                                <div class="chatbox-contacts-list">
+                                    <button class="chatbox-contacts-list-name-icon">
+                                        <img src="../img/asdad/icons2-16.png" width="12%"
+                                            title="Delete Contact" />
+                                        <div class="chatbox-contacts-list-name-email">
+                                            <p>Ashish Sarmah</p>
+                                            <p style="opacity: 0.7; font-size:small">ashishsarmah@gmail.com</p>
+                                        </div>
+                                    </button>
+                                    <button class="chatbox-contacts-list-name-icon">
+                                        <img src="../img/asdad/icons2-16.png" width="12%" height="100%"
+                                            title="Delete Contact" />
+                                        <div class="chatbox-contacts-list-name-email">
+                                            <p>Ashish Sarmah</p>
+                                            <p style="opacity: 0.7; font-size:small">ashishsarmah@gmail.com</p>
+                                        </div>
+                                    </button>
+                                    <button class="chatbox-contacts-list-name-icon">
+                                        <img src="../img/asdad/icons2-16.png" width="12%" height="100%"
+                                            title="Delete Contact" />
+                                        <div class="chatbox-contacts-list-name-email">
+                                            <p>Ashish Sarmah</p>
+                                            <p style="opacity: 0.7; font-size:small">ashishsarmah@gmail.com</p>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="message-content-body-main-right">
+                                <div class="message-content-body-main-right-head justify-content-between">
+                                    <div class="message-content-body-main-right-head-left">
+                                        <img src="../img/asdad/icons2-16.png" width="30px" height="100%" />
+                                        <p style="font-weight: 600;">John Doe</p>
+                                        <p style="opacity: 0.6;">Lorem ipsum dolor sit amet, consectetur </p>
+                                    </div>
+                                    <div class="message-content-body-main-right-head-time">
+                                        <p style="opacity: 0.6; font-size: small;">14.04.2020 09.25</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <hr>
+                                <div class="message-content-body-main-right-head justify-content-between">
+                                    <div class="message-content-body-main-right-head-left">
+                                        <img src="../img/asdad/icons2-16.png" width="30px" height="100%" />
+                                        <p style="font-weight: 600;">John Doe</p>
+                                        <p style="opacity: 0.6;">Lorem ipsum dolor sit amet, consectetur </p>
+                                    </div>
+                                    <div class="message-content-body-main-right-head-time">
+                                        <p style="opacity: 0.6; font-size: small;">14.04.2020 09.25</p>
+                                    </div>
+                                </div>
+                                <div class="message-content-body-main-right-text">
+                                    <p> Hey
+                                        <br><br>Lorem
+                                        ipsum dolor
+                                        sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.Lorem
+                                        ipsum dolor <br>
+                                        sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.Lorem
+                                        ipsum dolo sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.sit amet, consectetur adipiscing elit, sed
+                                        do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.
+                                        <br>Regards
+                                        <br>Jon
+                                    </p>
+                                </div>
+                                <div id="message-content-body-main-right-input">
+                                    <p>Write Your Message Here</p>
+                                </div>
+                                <div class="message-content-body-main-right-footer-send-btn">
+                                    <i style="font-size: 16px;" class="fa-solid fa-trash fa-xl"></i>
+                                    <div class="schedule-message-button" style="width: 20%;">
+                                        <button type="button" class="btn btn-success">
+                                            Send
+                                        </button>
+                                        <i class="fa-regular fa-calendar"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -2252,10 +2385,15 @@
                 console.error(error);
             });
         ClassicEditor
-        .create(document.querySelector('#message-send-mail'))
-        .catch(error => {
-            console.error(error);
+            .create(document.querySelector('#message-send-mail'))
+            .catch(error => {
+                console.error(error);
         });
+        ClassicEditor
+            .create(document.querySelector('#message-content-body-main-right-input'))
+            .catch(error => {
+                console.error(error);
+            });
     </script>
     <script src="../js/graph.js"></script>
     <script src="../js/pick.js"></script>
