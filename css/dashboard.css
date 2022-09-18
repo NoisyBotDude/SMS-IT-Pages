@@ -112,6 +112,19 @@ textarea {
     row-gap: 50px;
 }
 
+.dashboard-content-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: max-content;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 .dashboard-content--navbaar {
     display: flex;
     flex: row;
@@ -860,9 +873,7 @@ input:checked+.slider:before {
     height: max-content;
     row-gap: 30px;
     background-color: #F2F2F2;
-    margin-right: 30px;
     border-radius: 30px;
-    padding: 40px 20px 20px 20px;
 }
 
 .message-content--navbar--number {
@@ -958,6 +969,10 @@ input:checked+.slider:before {
     align-items: center;
     border: none;
     background-color: white;
+}
+
+.chatbox-contacts-list-name-icon img {
+    width: 40px;
 }
 
 .chatbox-contacts-list-name-email {
@@ -1079,7 +1094,7 @@ input:checked+.slider:before {
 
 
 
-.dropdown-content {
+.message-dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
@@ -1091,18 +1106,18 @@ input:checked+.slider:before {
     border-radius: 10px;
 }
 
-.dropdown-content a {
+.message-dropdown-content a {
     color: black;
     padding: 10px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {
+.message-dropdown-content a:hover {
     background-color: #f1f1f1
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .message-dropdown-content {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -1183,19 +1198,6 @@ input:checked+.slider:before {
 
 /* CONTACT PAGE */
 
-.dashboard-content-contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: max-content;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 .contact-page {
     display: flex;
     flex-direction: column;
@@ -1250,12 +1252,16 @@ input:checked+.slider:before {
 .contact-search--filter {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     /* column-gap: 15px; */
     row-gap: 20px;
     width: 100%;
     flex-wrap: wrap;
+}
+
+.contact-search--filter p {
+    width: 50%;
 }
 
 .contact-filter {
@@ -1331,19 +1337,6 @@ input:checked+.slider:before {
 
 
 /* ACTIVITY PAGE */
-
-.dashboard-content-activity {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: max-content;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
 
 .activity {
     display: flex;
@@ -1534,19 +1527,6 @@ input:checked+.slider:before {
 /* DROPDOWN QUESTION MARK ICON END */
 
 /* FAX PAGE */
-
-.dashboard-content-fax {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    height: max-content;
-    background-color: #f2f2f2;
-    border-radius: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
 
 .fax-page {
     display: flex;
