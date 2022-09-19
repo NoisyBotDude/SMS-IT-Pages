@@ -900,6 +900,22 @@ input:checked+.slider:before {
     height: max-content;
 }
 
+.schedule-message-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+    background-color: #198754;
+    border-radius: 5px;
+}
+
+.schedule-message-button button {
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-left: 2px solid white;
+} 
+
 .message-content-body-main-left {
     display: flex;
     flex-direction: column;
