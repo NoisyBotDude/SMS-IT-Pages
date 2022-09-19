@@ -64,6 +64,10 @@
                     <img src="../img/asdad/icons2-20.png" />
                     <p>Contacts</p>
                 </button>
+                <button class="dashboard-navbaar--links--button" id="dashboard-content-voice-broadcast">
+                    <img src="../img/asdad/icons2-20.png" />
+                    <p>Voice Broadcast</p>
+                </button>
                 <button class="dashboard-navbaar--links--button" id="dashboard-content-email">
                     <img src="../img/asdad/icons2-20.png" />
                     <p>Email</p>
@@ -859,6 +863,22 @@
                     </div>
                 </div>
             </div>
+            <div class="dashboard-content-body dashboard-content-voice-broadcast dashboard-content-info hide">
+                <div class="voice-content">
+                    <div class="dashboard-content--navbaar">
+                        <div class="message-content--navbar--number dashboard-filter">
+                            <p>Page Search</p>
+                            <input type="email" value="johndoe@gmail.com" />
+                        </div>
+                        <div class="message-content--navbar--icons page-icons-list">
+                            <img src="../img/icons/icons-copy.png">
+                            <img src="../img/icons/icons-xx.png">
+                            <img src="../img/icons/icons-printer.png">
+                            <img src="../img/icons/icons-3-bars.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="dashboard-content-body dashboard-content-email dashboard-content-info hide">
                 <div class="message-content">
                     <div class="dashboard-content--navbaar">
@@ -904,16 +924,14 @@
                                         </div>
                                     </button>
                                     <button class="chatbox-contacts-list-name-icon">
-                                        <img src="../img/asdad/icons2-16.png"
-                                            title="Delete Contact" />
+                                        <img src="../img/asdad/icons2-16.png" title="Delete Contact" />
                                         <div class="chatbox-contacts-list-name-email">
                                             <p>Ashish Sarmah</p>
                                             <p style="opacity: 0.7; font-size:small">ashishsarmah@gmail.com</p>
                                         </div>
                                     </button>
                                     <button class="chatbox-contacts-list-name-icon">
-                                        <img src="../img/asdad/icons2-16.png"
-                                            title="Delete Contact" />
+                                        <img src="../img/asdad/icons2-16.png" title="Delete Contact" />
                                         <div class="chatbox-contacts-list-name-email">
                                             <p>Ashish Sarmah</p>
                                             <p style="opacity: 0.7; font-size:small">ashishsarmah@gmail.com</p>
@@ -1021,6 +1039,8 @@
                         </p>
                     </div>
                     <button class="btn btn-success" style="width: 12%; padding:4px ;">Send</button>
+                    <button data-bs-toggle="modal" data-bs-target="#send-fax-modal">Edit contact</button>
+                    <button data-bs-toggle="modal" data-bs-target="#schedule-mail-fax">Schedule</button>
                 </div>
             </div>
         </div>
@@ -2428,6 +2448,89 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+    <div id="send-fax-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-header--title">
+                        <img src="../img/New folder (3)/contactsicons-57.png" width="18%" height="20%" />
+                        <p style="font-weight: 600;">SEND FAX</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="margin: 0px; margin-right: 1%;"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-edit-inputs">
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Send From</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Send To</p>
+                            <input type="text" />
+                        </div>
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Quality</p>
+                            <input type="text" />
+                        </div>
+                        <div class="send-fax-modal">
+                            <p style="font-weight: 600;">PDF Files Only</p>
+                            <div class="send-fax-modal-input">
+                                <input type="file" name="uploadfile" id="img" style="display:none;">
+                                <label class="pick-file-image-fax" for="img">Pick File
+                                    <img src="../img/New folder (3)/icons-11.png" width="35px" />
+                                </label>
+
+                            </div>
+                        </div>
+
+                        <div class="modal-body--input">
+                            <div class="modal-body--input--important">
+                                <p>
+                                    Credits: 1 credit will be deducted for each page faxed + 1 credit per minute for fax
+                                    duration Example: If you are faxing 5 pages, and it takes 1 minute and 45 seconds, 7
+                                    credits will be deducted
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+
+                    <button type="button" class="btn btn-primary"
+                        style="background-color: #22B573; border: none;">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="schedule-mail-fax" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <div class="modal-header--title">
+                        <img src="../img/New folder (3)/contactsicons-57.png" width="18%" height="20%" />
+                        <p style="font-weight: 600;">Schedule Mail/Message</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                        style="margin: 0px; margin-right: 1%;"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-body-edit-inputs">
+                        <div class="modal-body--input">
+                            <p style="font-weight: 600;">Set Time</p>
+                            <input type="date" name="start-date" id="start-date" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-primary"
+                        style="background-color: #22B573; border: none;">Save</button>
+                </div>
+            </div>
         </div>
     </div>
 

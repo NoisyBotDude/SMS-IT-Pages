@@ -1586,8 +1586,66 @@ input:checked+.slider:before {
     font-weight: 500;
 }
 
+.send-fax-modal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    column-gap: 30px;
+}
+
+.send-fax-modal p {
+    text-align: center;
+    display: flex;
+    width: 35%;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+
+.send-fax-modal-input {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+
+
+}
+
+.pick-file-image-fax {
+    width: 40%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
 
 /* FAX PAGE END */
+
+/* VOICE BROADCAST PAGE */
+
+.voice-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    row-gap: 40px;
+    background-color: #f2f2f2;
+    font-family: "Poppins", sans-serif;
+}
+
+/* VOICE BROADCAST  PAGE END */
 
 .hide {
     display: none;
