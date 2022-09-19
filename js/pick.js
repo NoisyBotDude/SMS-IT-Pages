@@ -41,3 +41,12 @@ var numberPoolContents = document.getElementById("number-pool-contents");
 numberPoolCheckbox.addEventListener("click", function() {
     numberPoolContents.classList.toggle("hide");
 })
+
+var voiceSelect = document.getElementById("broadcast-voice-select");
+
+$(voiceSelect).change(function() {
+    var selectedVoice = $(this).find('option:selected').val();
+    $(this).parent().parent().parent().find(".voice-inputs").addClass("hide");
+    $(this).parent().parent().parent().find('#' + selectedVoice).removeClass('hide').show();
+    console.log(selectedVoice);
+})

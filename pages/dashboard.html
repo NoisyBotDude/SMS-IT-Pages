@@ -702,7 +702,9 @@
                                             <img src="../img/New folder (3)/contactsicons-49.png"
                                                 title="Delete Contact" />
                                             <img src="../img/New folder (3)/contactsicons-50.png" title="Delete Chat" />
-                                            <img src="../Icons/fax-icon.png" title="Fax" />
+                                            <img src="../Icons/fax-icon.png" 
+                                                data-bs-toggle="modal" data-bs-target="#send-fax-modal"
+                                                title="Fax" />
                                         </div>
                                     </td>
                                 </tr>
@@ -730,7 +732,9 @@
                                             <img src="../img/New folder (3)/contactsicons-49.png"
                                                 title="Delete Contact" />
                                             <img src="../img/New folder (3)/contactsicons-50.png" title="Delete Chat" />
-                                            <img src="../Icons/fax-icon.png" title="Fax" />
+                                            <img src="../Icons/fax-icon.png" 
+                                                data-bs-toggle="modal" data-bs-target="#send-fax-modal"
+                                                title="Fax" />
                                         </div>
                                     </td>
                                 </tr>
@@ -934,22 +938,22 @@
                             </div>
                             <div class="voice-mid-selects-right">
                                 <p>Voice Broadcast Msg Type</p>
-                                <select>
+                                <select id="broadcast-voice-select">
                                     <option value="text-to-voice">Text To Voice</option>
-                                    <option value="mp3-m4a audio">MP3/MP4A Audio</option>
+                                    <option value="mp3-m4a-audio">MP3/MP4A Audio</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="voice-mid-message">
+                        <div class="voice-mid-message voice-inputs" id="text-to-voice">
                             <p>Message</p>
                             <input type="text">
                         </div>
-                        <div class="voice-pick-music hide">
+                        <div class="voice-pick-music hide voice-inputs" id="mp3-m4a-audio">
                             <div class="voice-pickfile">
                                 <p style="opacity: 0.7;padding-bottom:5px">Choose File</p>
                                 <div class="pick-file-voice">
-                                    <input type="file" name="uploadfile" id="img" style="display:none;"></input>
-                                    <label class="pick-file-image" for="img">Pick File</label>
+                                    <input type="file" name="uploadmusic" id="voice-broadcast-music" style="display:none;"></input>
+                                    <label class="pick-file-audio" for="voice-broadcast-music">Pick File</label>
                                 </div>
                             </div>
                             <div class="voice-music">
@@ -1187,8 +1191,6 @@
                         </p>
                     </div>
                     <button class="btn btn-success" style="width: 12%; padding:4px ;">Send</button>
-                    <button data-bs-toggle="modal" data-bs-target="#send-fax-modal">Edit contact</button>
-                    <button data-bs-toggle="modal" data-bs-target="#schedule-mail-fax">Schedule</button>
                 </div>
             </div>
         </div>
@@ -2700,9 +2702,10 @@
             });
     </script>
     <script src="../js/graph.js"></script>
-    <script src="../js/pick.js"></script>
     <script src="../js/jquery.min.js"></script>
+    <script src="../js/pick.js"></script>
     <script src="../js/dashboard.js"></script>
+    <script src="../js/upload_file.js"></script>
     <script src="../js/smpp-gateways.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous">
