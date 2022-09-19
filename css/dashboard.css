@@ -807,10 +807,7 @@ input:checked+.slider:before {
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
+    padding: 10px;
 }
 
 .dashboard-filter label {
@@ -850,7 +847,7 @@ input:checked+.slider:before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: max-content;
     row-gap: 50px;
 }
@@ -1266,7 +1263,6 @@ input:checked+.slider:before {
 
 .contact-filter {
     align-items: flex-start;
-    width: 50%;
     column-gap: 5px;
     row-gap: 5px;
     flex-direction: column;
@@ -1422,17 +1418,7 @@ input:checked+.slider:before {
 .activity-filter {
     column-gap: 5px;
     row-gap: 5px;
-    width: 30%;
     justify-content: flex-start;
-}
-
-.activity-filter input,
-.activity-filter select {
-    width: 100%;
-}
-
-.activity-filter label {
-    width: 100%;
 }
 
 .activity-filter img {
