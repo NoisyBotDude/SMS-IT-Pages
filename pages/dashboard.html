@@ -270,19 +270,23 @@
                                         placeholder="Please use country code with number"></textarea>
                                 </div>
                             </div>
-                            <div class="message-select">
-                                <p>Message Template</p>
-                                <select>
-                                    <option>123456789</option>
-                                </select>
-
+                            <div class="row">
+                                <label for="message-template" class="col-md-5 col-form-label">Message Template</label>
+                                <div class="col-md-6">
+                                    <select id="message-template" class="form-select form-control-md">
+                                        <option>123456789</option>
+                                        <option>123456789</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="message-select">
-                                <p>Mobile Splash Page</p>
-                                <select>
-                                    <option>123456789</option>
-                                </select>
-
+                            <div class="row">
+                                <label for="message-splash-page" class="col-md-5 col-form-label">Message Splash Page</label>
+                                <div class="col-md-6">
+                                    <select id="message-splash-page" class="form-select form-control-md">
+                                        <option>123456789</option>
+                                        <option>123456789</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="facebook-link">
                                 <button>Facebook</button>
@@ -731,17 +735,20 @@
             </div>
             <div class="dashboard-content-body dashboard-content-activity dashboard-content-info hide">
                 <div class="activity">
-                    <div class="dashboard-content--navbaar">
-                        <div class="activity-navbar--number dashboard-filter">
-                            <p style="font-size: 1vw; font-weight: 600;">Log Type</p>
-                            <select name="device" id="device">
-                                <option value="">Select Device</option>
-                                <option value="1">Device 1</option>
-                                <option value="2">Device 2</option>
-                                <option value="3">Device 3</option>
-                            </select>
+                    <div class="row g-3 w-100 justify-content-between">
+                        <div class="col-lg-3 activity-navbar--number dashboard-filter">
+                            <div class="row w-100">
+                                <label for="activity-select-device" class="col-sm-5 col-form-label">Log Type</label>
+                                <div class="col-md-7">
+                                    <select name="device" id="activity-select-device" class="form-select form-control-sm">
+                                        <option value="1">Device 1</option>
+                                        <option value="2">Device 2</option>
+                                        <option value="3">Device 3</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="page-icons-list activity-navbar--icons">
+                        <div class="col-lg-8 page-icons-list activity-navbar--icons">
                             <img src="../img/icons/icons-copy.png" title="Copy" />
                             <img src="../img/icons/icons-xx.png" title="Excel" />
                             <img src="../img/icons/icons-printer.png" title="Print" />
