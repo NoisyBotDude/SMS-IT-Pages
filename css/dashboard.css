@@ -514,27 +514,6 @@ textarea {
     justify-content: center;
 }
 
-.message-select {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 85%;
-    row-gap: 15px;
-    font-size: 16px;
-}
-
-.message-select p {
-    margin-bottom: 0px;
-}
-
-.message-select select {
-    border-radius: 7px;
-    width: 50%;
-    padding: 5px;
-    height: max-content;
-}
-
 .facebook-link {
     display: flex;
     flex-direction: row;
@@ -807,10 +786,7 @@ input:checked+.slider:before {
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
+    padding: 10px;
 }
 
 .dashboard-filter label {
@@ -850,7 +826,7 @@ input:checked+.slider:before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: max-content;
     row-gap: 50px;
 }
@@ -1249,24 +1225,8 @@ input:checked+.slider:before {
 
 }
 
-.contact-search--filter {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    /* column-gap: 15px; */
-    row-gap: 20px;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
-.contact-search--filter p {
-    width: 50%;
-}
-
 .contact-filter {
     align-items: flex-start;
-    width: 50%;
     column-gap: 5px;
     row-gap: 5px;
     flex-direction: column;
@@ -1350,30 +1310,14 @@ input:checked+.slider:before {
 }
 
 .activity-navbar--number {
-    width: 30%;
-    justify-content: space-between;
+    /* width: 30%; */
     background-color: #e6e6e6;
     border-radius: 15px;
     padding: 10px;
-    height: max-content;
-}
-
-.activity-navbar--number p {
-    width: 30%;
-    margin: 0;
-    padding-left: 8px;
-}
-
-.activity-navbar--number select {
-    width: 60%;
-}
-
-.activity-navbar--icons {
-    width: 70%;
 }
 
 .activity-navbar--icons>img {
-    width: 6.5%;
+    width: 43px;
 }
 
 .activity-body {
@@ -1408,31 +1352,10 @@ input:checked+.slider:before {
     font-size: 20px;
 }
 
-.activity-search--filter {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    /* column-gap: 15px; */
-    row-gap: 20px;
-    width: 100%;
-    flex-wrap: wrap;
-}
-
 .activity-filter {
     column-gap: 5px;
     row-gap: 5px;
-    width: 30%;
     justify-content: flex-start;
-}
-
-.activity-filter input,
-.activity-filter select {
-    width: 100%;
-}
-
-.activity-filter label {
-    width: 100%;
 }
 
 .activity-filter img {

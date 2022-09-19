@@ -274,19 +274,23 @@
                                         placeholder="Please use country code with number"></textarea>
                                 </div>
                             </div>
-                            <div class="message-select">
-                                <p>Message Template</p>
-                                <select>
-                                    <option>123456789</option>
-                                </select>
-
+                            <div class="row">
+                                <label for="message-template" class="col-md-5 col-form-label">Message Template</label>
+                                <div class="col-md-6">
+                                    <select id="message-template" class="form-select form-control-md">
+                                        <option>123456789</option>
+                                        <option>123456789</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="message-select">
-                                <p>Mobile Splash Page</p>
-                                <select>
-                                    <option>123456789</option>
-                                </select>
-
+                            <div class="row">
+                                <label for="message-splash-page" class="col-md-5 col-form-label">Message Splash Page</label>
+                                <div class="col-md-6">
+                                    <select id="message-splash-page" class="form-select form-control-md">
+                                        <option>123456789</option>
+                                        <option>123456789</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="facebook-link">
                                 <button>Facebook</button>
@@ -397,7 +401,7 @@
                     </div>
                 </div>
             </div>
-            <div class="dashboard-content--chatbox dashboard-content-info hide">
+            <div class="dashboard-content-body dashboard-content--chatbox dashboard-content-info hide">
                 <div class="message-content">
                     <div class="dashboard-content--navbaar">
                         <div class="message-content--navbar--number dashboard-filter">
@@ -617,42 +621,51 @@
                     </div>
                     <div class="contact-page-mid-div">
                         <p style="font-size:1.4vw; font-weight:600">Contact Search</p>
-                        <div class="contact-search--filter">
-                            <div class="dashboard-filter contact-filter">
-                                <label for="contact-field-search-on">Field you want to search on</label>
-                                <select id="contact-field-search-on">
-                                    <option>Number</option>
-                                </select>
-                            </div>
-                            <div class="dashboard-filter contact-filter">
-                                <label for="search-on-value">Search on value</label>
-                                <input type="text" id="search-on-value">
-                            </div>
-                            <p style="font-weight: 600;">Filters:</p>
-                            <button class="contact-search-no-border-right-reset">
-                                Reset Filters
-                            </button>
-                            <div class="dashboard-filter contact-filter">
-                                <label for="contact-field-groups">Groups</label>
-                                <select id="contact-filter-groups">
-                                    <option>Hellooo</option>
-                                </select>
-                            </div>
-                            <div class="dashboard-filter contact-filter">
-                                <label for="contact-filter-source">Source</label>
-                                <select id="contact-filter-source">
-                                    <option>Hellooo</option>
-                                </select>
-                            </div>
-                        </div>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6 dashboard-filter contact-filter">
+                                        <label class="form-label" for="contact-field-search-on">Field you want to search on</label>
+                                        <select id="contact-field-search-on" class="form-select">
+                                            <option>Number</option>
+                                            <option>Number</option>
+                                            <option>Number</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 dashboard-filter contact-filter">
+                                        <label class="form-label" for="search-on-value">Search on value</label>
+                                        <input type="text" id="search-on-value" class="form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p style="font-weight: 600;">Filters:</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="contact-search-no-border-right-reset">
+                                            Reset Filters
+                                        </button>    
+                                    </div>
+                                    <div class="col-md-6 dashboard-filter contact-filter">
+                                        <label class="form-label" for="contact-field-groups">Groups</label>
+                                        <select id="contact-filter-groups" class="form-select">
+                                            <option>Hellooo</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 dashboard-filter contact-filter">
+                                        <label class="form-label" for="contact-filter-source">Source</label>
+                                        <select id="contact-filter-source" class="form-select">
+                                            <option>Hellooo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
                         <div class="contact-page-mid-div-search-button">
                             <button style="background-color: #22b573;border:none;">Search</button>
                         </div>
                     </div>
-                    <div class="contact-page-last-div">
+                    <div class="contact-page-last-div table-responsive">
                         <table class="table table-borderless">
                             <thead>
                                 <tr class="text-center">
+                                    <th scope="col"></th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Number</th>
@@ -664,7 +677,11 @@
                             </thead>
                             <tbody>
                                 <tr class="text-center">
-                                    <th scope="row">1</th>
+                                    <td>
+                                        <img src="../Icons/schedule-icon.png" width="20px" title="Schedule Message"
+                                        data-bs-toggle="modal" data-bs-target="#single-sms" />
+                                    </td>
+                                    <td>Name</td>
                                     <td>Mark</td>
                                     <td>Otto</td>
                                     <td>@mdo</td>
@@ -683,11 +700,16 @@
                                             <img src="../img/New folder (3)/contactsicons-49.png"
                                                 title="Delete Contact" />
                                             <img src="../img/New folder (3)/contactsicons-50.png" title="Delete Chat" />
+                                            <img src="../Icons/fax-icon.png" title="Fax" />
                                         </div>
                                     </td>
                                 </tr>
                                 <tr class="text-center">
-                                    <th scope="row">2</th>
+                                    <td>
+                                        <img src="../Icons/schedule-icon.png" width="20px" title="Schedule Message"
+                                        data-bs-toggle="modal" data-bs-target="#single-sms" />
+                                    </td>
+                                    <td>Name</td>
                                     <td>Jacob</td>
                                     <td>Thornton</td>
                                     <td>@fat</td>
@@ -706,6 +728,7 @@
                                             <img src="../img/New folder (3)/contactsicons-49.png"
                                                 title="Delete Contact" />
                                             <img src="../img/New folder (3)/contactsicons-50.png" title="Delete Chat" />
+                                            <img src="../Icons/fax-icon.png" title="Fax" />
                                         </div>
                                     </td>
                                 </tr>
@@ -716,17 +739,20 @@
             </div>
             <div class="dashboard-content-body dashboard-content-activity dashboard-content-info hide">
                 <div class="activity">
-                    <div class="dashboard-content--navbaar">
-                        <div class="activity-navbar--number dashboard-filter">
-                            <p style="font-size: 1vw; font-weight: 600;">Log Type</p>
-                            <select name="device" id="device">
-                                <option value="">Select Device</option>
-                                <option value="1">Device 1</option>
-                                <option value="2">Device 2</option>
-                                <option value="3">Device 3</option>
-                            </select>
+                    <div class="row g-3 w-100 justify-content-between">
+                        <div class="col-lg-3 activity-navbar--number dashboard-filter">
+                            <div class="row w-100">
+                                <label for="activity-select-device" class="col-sm-5 col-form-label">Log Type</label>
+                                <div class="col-md-7">
+                                    <select name="device" id="activity-select-device" class="form-select form-control-sm">
+                                        <option value="1">Device 1</option>
+                                        <option value="2">Device 2</option>
+                                        <option value="3">Device 3</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="page-icons-list activity-navbar--icons">
+                        <div class="col-lg-8 page-icons-list activity-navbar--icons">
                             <img src="../img/icons/icons-copy.png" title="Copy" />
                             <img src="../img/icons/icons-xx.png" title="Excel" />
                             <img src="../img/icons/icons-printer.png" title="Print" />
@@ -738,60 +764,62 @@
                             <div class="activity-search--header">
                                 <p style="font-weight: 600;">Search Messages</p>
                             </div>
-                            <div class="activity-search--filter">
-                                <div class="dashboard-filter activity-filter">
-                                    <label for="device">
-                                        <img src="../Icons/New folder (4)/activityicons-60.png" />
-                                        Select Device
-                                    </label>
-                                    <select name="device" id="device">
-                                        <option value="">Select Device</option>
-                                        <option value="1">Device 1</option>
-                                        <option value="2">Device 2</option>
-                                        <option value="3">Device 3</option>
-                                    </select>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-4 dashboard-filter activity-filter">
+                                        <label class="form-label" for="device">
+                                            <img src="../Icons/New folder (4)/activityicons-60.png" />
+                                            Select Device
+                                        </label>
+                                        <select name="device" id="device" class="form-select">
+                                            <option value="">Select Device</option>
+                                            <option value="1">Device 1</option>
+                                            <option value="2">Device 2</option>
+                                            <option value="3">Device 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 dashboard-filter activity-filter">
+                                        <label class="form-label" for="phone">
+                                            <img src="../Icons/New folder (4)/activityicons-62.png" />
+                                            Mobile Number
+                                        </label>
+                                        <input type="tel" name="phone" id="phone" class="form-control"/>
+                                    </div>
+                                    <div class="col-md-4 dashboard-filter activity-filter">
+                                        <label class="form-label" for="status">
+                                            <img src="../Icons/New folder (4)/activityicons-64.png" />
+                                            Status
+                                        </label>
+                                        <select name="status" id="status" class="form-select">
+                                            <option value="">Select Device</option>
+                                            <option value="1">Device 1</option>
+                                            <option value="2">Device 2</option>
+                                            <option value="3">Device 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4 dashboard-filter activity-filter">
+                                        <label class="form-label" for="message">
+                                            <img src="../Icons/New folder (4)/activityicons-61.png" />
+                                            Message
+                                        </label>
+                                        <input type="text" name="message" id="message" class="form-control"/>
+                                    </div>
+                                    <div class="col-md-4 dashboard-filter activity-filter">
+                                        <label class="form-label" for="start-date">
+                                            <img src="../Icons/New folder (4)/activityicons-63.png" />
+                                            Start Date
+                                        </label>
+                                        <input type="date" name="start-date" id="start-date" class="form-control"/>
+                                    </div>
+                                    <div class="col-md-4 dashboard-filter activity-filter">
+                                        <label class="form-label"for="end-date">
+                                            <img src="../Icons/New folder (4)/activityicons-63.png" />
+                                            End Date
+                                        </label>
+                                        <input type="date" name="end-date" id="end-date" class="form-control"/>
+                                    </div>
                                 </div>
-                                <div class="dashboard-filter activity-filter">
-                                    <label for="phone">
-                                        <img src="../Icons/New folder (4)/activityicons-62.png" />
-                                        Mobile Number
-                                    </label>
-                                    <input type="tel" name="phone" id="phone" />
-                                </div>
-                                <div class="dashboard-filter activity-filter">
-                                    <label for="status">
-                                        <img src="../Icons/New folder (4)/activityicons-64.png" />
-                                        Status
-                                    </label>
-                                    <select name="status" id="status">
-                                        <option value="">Select Device</option>
-                                        <option value="1">Device 1</option>
-                                        <option value="2">Device 2</option>
-                                        <option value="3">Device 3</option>
-                                    </select>
-                                </div>
-                                <div class="dashboard-filter activity-filter">
-                                    <label for="message">
-                                        <img src="../Icons/New folder (4)/activityicons-61.png" />
-                                        Message
-                                    </label>
-                                    <input type="text" name="message" id="message" />
-                                </div>
-                                <div class="dashboard-filter activity-filter">
-                                    <label for="start-date">
-                                        <img src="../Icons/New folder (4)/activityicons-63.png" />
-                                        Start Date
-                                    </label>
-                                    <input type="date" name="start-date" id="start-date" />
-                                </div>
-                                <div class="dashboard-filter activity-filter">
-                                    <label for="end-date">
-                                        <img src="../Icons/New folder (4)/activityicons-63.png" />
-                                        End Date
-                                    </label>
-                                    <input type="date" name="end-date" id="end-date" />
-                                </div>
-                            </div>
+                            </form>
                             <div class="activity-search--buttons">
                                 <div class="activity-search--buttons--button">
                                     <button>Search</button>
